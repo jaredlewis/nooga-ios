@@ -18,6 +18,7 @@
     RKObjectMapping *objectMapper = [RKObjectMapping mappingForClass:[self class]];
     [objectMapper mapKeyPathsToAttributes:
      @"name", @"name",
+     @"id", @"categoryId",
      nil];
     return objectMapper;
 }

@@ -50,6 +50,7 @@
 		E4E305BF1633B88300E661DE /* stag-medium-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4E305BC1633B88300E661DE /* stag-medium-webfont.ttf */; };
 		E4E305C01633B88300E661DE /* stag-semibold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4E305BD1633B88300E661DE /* stag-semibold-webfont.ttf */; };
 		E4E305C31633C19200E661DE /* NoogaArticleViewArticleWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305C21633C19200E661DE /* NoogaArticleViewArticleWebView.m */; };
+		F5B03CD71635F87700D0BD45 /* NoogaArticleControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B03CD61635F87700D0BD45 /* NoogaArticleControllerCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +195,8 @@
 		E4E305BD1633B88300E661DE /* stag-semibold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "stag-semibold-webfont.ttf"; sourceTree = "<group>"; };
 		E4E305C11633C19100E661DE /* NoogaArticleViewArticleWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleViewArticleWebView.h; path = Code/Modules/Article/View/NoogaArticleViewArticleWebView.h; sourceTree = "<group>"; };
 		E4E305C21633C19200E661DE /* NoogaArticleViewArticleWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleViewArticleWebView.m; path = Code/Modules/Article/View/NoogaArticleViewArticleWebView.m; sourceTree = "<group>"; };
+		F5B03CD61635F87700D0BD45 /* NoogaArticleControllerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleControllerCategory.m; path = Code/Modules/Article/Controller/NoogaArticleControllerCategory.m; sourceTree = "<group>"; };
+		F5B03CD81635FA2A00D0BD45 /* NoogaArticleControllerCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleControllerCategory.h; path = Code/Modules/Article/Controller/NoogaArticleControllerCategory.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +417,8 @@
 			children = (
 				E4E3058516338B2300E661DE /* NoogaArticleControllerArticle.h */,
 				E4E3058616338B2300E661DE /* NoogaArticleControllerArticle.m */,
+				F5B03CD81635FA2A00D0BD45 /* NoogaArticleControllerCategory.h */,
+				F5B03CD61635F87700D0BD45 /* NoogaArticleControllerCategory.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -625,6 +630,7 @@
 				E4E305B71633B5A800E661DE /* FireplugDraw.m in Sources */,
 				E4E305B81633B5A800E661DE /* UIColor+CreateMethods.m in Sources */,
 				E4E305C31633C19200E661DE /* NoogaArticleViewArticleWebView.m in Sources */,
+				F5B03CD71635F87700D0BD45 /* NoogaArticleControllerCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

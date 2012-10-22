@@ -14,6 +14,7 @@
 @synthesize startColor;
 @synthesize endColor;
 @synthesize fireplugDraw;
+@synthesize category;
 
 - (id)initWithFrame:(CGRect)frame
 {

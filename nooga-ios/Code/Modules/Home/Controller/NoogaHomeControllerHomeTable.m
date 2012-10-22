@@ -11,6 +11,7 @@
 #import "NoogaArticleModelCategory.h"
 #import "NoogaArticleViewArticleSectionHeader.h"
 #import "NoogaArticleViewArticleWebView.h"
+#import "NoogaArticleControllerCategory.h"
 
 @implementation NoogaHomeControllerHomeTable
 
@@ -60,12 +61,13 @@
     NoogaArticleViewArticleSection *section = [[NoogaArticleViewArticleSection alloc] init];
     [section addDelegate:self];
     NoogaArticleViewArticleSectionHeader *header = [[NoogaArticleViewArticleSectionHeader alloc] init];
+    header.category = category;
     header.titleLabel.text = category.name;
     [section setHeader:header];
     [section setHeaderHeight:header.frame.size.height];
     
     //Add tap gesture to header
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showCategory)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showCategory:)];
     [header addGestureRecognizer:tap];
     
     //Set the header color
@@ -101,9 +103,12 @@
     [self addSection:section];
 }
 
-- (void)showCategory
+- (void)showCategory:(UITapGestureRecognizer *)tapRecognizer
 {
-    NSLog(@"show category");
+    NoogaArticleViewArticleSectionHeader *headerView = (NoogaArticleViewArticleSectionHeader *)[tapRecognizer view];
+    NoogaArticleControllerCategory *categoryController = [[NoogaArticleControllerCategory alloc] init];
+    [categoryController setCategory:headerView.category];
+    [self.navigationController pushViewController:categoryController animated:YES];
 }
 
 ////////////////////////////////////////////////////////////
