@@ -1,0 +1,3 @@
+[submodule "nooga-ios/Submodules/RestKit"]
+	path = nooga-ios/Submodules/RestKit
+	url = git://github.com/RestKit/RestKit.git

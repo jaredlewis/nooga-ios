@@ -16,7 +16,114 @@
 		E4E304E91633491100E661DE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E4E304E81633491100E661DE /* Default.png */; };
 		E4E304EB1633491100E661DE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4E304EA1633491100E661DE /* Default@2x.png */; };
 		E4E304ED1633491100E661DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4E304EC1633491100E661DE /* Default-568h@2x.png */; };
+		E4E3051116334CC900E661DE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E3050F16334CB600E661DE /* CFNetwork.framework */; };
+		E4E3051416334CE100E661DE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E3051216334CD800E661DE /* CoreData.framework */; };
+		E4E3051716334CF500E661DE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E3051516334CEB00E661DE /* Security.framework */; };
+		E4E3051A16334D0900E661DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E3051816334D0000E661DE /* MobileCoreServices.framework */; };
+		E4E3051D16334D1C00E661DE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E3051B16334D1500E661DE /* SystemConfiguration.framework */; };
+		E4E3051F16334D2700E661DE /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E3051E16334D2700E661DE /* libxml2.dylib */; };
+		E4E3052216334D4700E661DE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E3052016334D3B00E661DE /* QuartzCore.framework */; };
+		E4E3052316334D5D00E661DE /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E3050316334BCD00E661DE /* libRestKit.a */; };
+		E4E3054E1633586400E661DE /* NoogaArticleModelArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E3054D1633586400E661DE /* NoogaArticleModelArticle.m */; };
+		E4E305521633695F00E661DE /* NoogaArticleModelCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305511633695F00E661DE /* NoogaArticleModelCategory.m */; };
+		E4E30556163370D000E661DE /* NoogaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30555163370D000E661DE /* NoogaModel.m */; };
+		E4E30577163387C500E661DE /* AKObservable.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30567163387C500E661DE /* AKObservable.m */; };
+		E4E30578163387C500E661DE /* AKWeakItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30569163387C500E661DE /* AKWeakItem.m */; };
+		E4E30579163387C500E661DE /* NSMutableArray+AK.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E3056B163387C500E661DE /* NSMutableArray+AK.m */; };
+		E4E3057A163387C500E661DE /* NSString+AK.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E3056D163387C500E661DE /* NSString+AK.m */; };
+		E4E3057B163387C500E661DE /* FireplugTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30570163387C500E661DE /* FireplugTableViewCell.m */; };
+		E4E3057C163387C500E661DE /* FPDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30572163387C500E661DE /* FPDataStore.m */; };
+		E4E3057D163387C500E661DE /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30574163387C500E661DE /* TableViewController.m */; };
+		E4E3057E163387C500E661DE /* TableViewControllerSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30576163387C500E661DE /* TableViewControllerSection.m */; };
+		E4E305811633889A00E661DE /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305801633889A00E661DE /* Utils.m */; };
+		E4E305841633896100E661DE /* NSMutableArray+WeakReferences.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305831633896100E661DE /* NSMutableArray+WeakReferences.m */; };
+		E4E3058716338B2300E661DE /* NoogaArticleControllerArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E3058616338B2300E661DE /* NoogaArticleControllerArticle.m */; };
+		E4E3058A16338FF600E661DE /* NoogaArticleViewArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E3058916338FF600E661DE /* NoogaArticleViewArticleCell.m */; };
+		E4E305911633952F00E661DE /* NoogaHomeControllerHomeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305901633952F00E661DE /* NoogaHomeControllerHomeTable.m */; };
+		E4E30594163395A400E661DE /* NoogaArticleViewArticleSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30593163395A400E661DE /* NoogaArticleViewArticleSection.m */; };
+		E4E305A916339EFB00E661DE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E305A716339EED00E661DE /* ImageIO.framework */; };
+		E4E305AF16339F4E00E661DE /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E305A216339E8500E661DE /* libSDWebImage.a */; };
+		E4E305B21633B54C00E661DE /* NoogaArticleViewArticleSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305B11633B54C00E661DE /* NoogaArticleViewArticleSectionHeader.m */; };
+		E4E305B71633B5A800E661DE /* FireplugDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305B41633B5A800E661DE /* FireplugDraw.m */; };
+		E4E305B81633B5A800E661DE /* UIColor+CreateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305B61633B5A800E661DE /* UIColor+CreateMethods.m */; };
+		E4E305BE1633B88300E661DE /* stag-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4E305BB1633B88300E661DE /* stag-bold-webfont.ttf */; };
+		E4E305BF1633B88300E661DE /* stag-medium-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4E305BC1633B88300E661DE /* stag-medium-webfont.ttf */; };
+		E4E305C01633B88300E661DE /* stag-semibold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4E305BD1633B88300E661DE /* stag-semibold-webfont.ttf */; };
+		E4E305C31633C19200E661DE /* NoogaArticleViewArticleWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305C21633C19200E661DE /* NoogaArticleViewArticleWebView.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4E3050216334BCD00E661DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4E304F716334BCC00E661DE /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		E4E3050416334BCD00E661DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4E304F716334BCC00E661DE /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		E4E3050616334BCD00E661DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4E304F716334BCC00E661DE /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		E4E3050816334BCD00E661DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4E304F716334BCC00E661DE /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		E4E3050A16334BCD00E661DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4E304F716334BCC00E661DE /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 259C301615128079003066A2;
+			remoteInfo = RestKitResources;
+		};
+		E4E3050D16334C9800E661DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4E304F716334BCC00E661DE /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		E4E3059F16339E8500E661DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4E3059516339E8500E661DE /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53922D6F148C55820056699D;
+			remoteInfo = SDWebImage;
+		};
+		E4E305A116339E8500E661DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4E3059516339E8500E661DE /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53761325155AD0D5005750A4;
+			remoteInfo = "SDWebImage ARC";
+		};
+		E4E305A316339E8500E661DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4E3059516339E8500E661DE /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 531041E0157EAFA400BBABC3;
+			remoteInfo = "SDWebImage ARC+MKAnnotation";
+		};
+		E4E305AD16339F4800E661DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4E3059516339E8500E661DE /* SDWebImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 53761307155AD0D5005750A4;
+			remoteInfo = "SDWebImage ARC";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E4E304D21633491100E661DE /* nooga-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nooga-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +139,61 @@
 		E4E304E81633491100E661DE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E4E304EA1633491100E661DE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E4E304EC1633491100E661DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E4E304F716334BCC00E661DE /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = "nooga-ios/Submodules/RestKit/RestKit.xcodeproj"; sourceTree = "<group>"; };
+		E4E3050F16334CB600E661DE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E4E3051216334CD800E661DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E4E3051516334CEB00E661DE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E4E3051816334D0000E661DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E4E3051B16334D1500E661DE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E4E3051E16334D2700E661DE /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		E4E3052016334D3B00E661DE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E4E3054C1633586400E661DE /* NoogaArticleModelArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleModelArticle.h; path = Code/Modules/Article/Model/NoogaArticleModelArticle.h; sourceTree = "<group>"; };
+		E4E3054D1633586400E661DE /* NoogaArticleModelArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleModelArticle.m; path = Code/Modules/Article/Model/NoogaArticleModelArticle.m; sourceTree = "<group>"; };
+		E4E305501633695F00E661DE /* NoogaArticleModelCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleModelCategory.h; path = Code/Modules/Article/Model/NoogaArticleModelCategory.h; sourceTree = "<group>"; };
+		E4E305511633695F00E661DE /* NoogaArticleModelCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleModelCategory.m; path = Code/Modules/Article/Model/NoogaArticleModelCategory.m; sourceTree = "<group>"; };
+		E4E30554163370D000E661DE /* NoogaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaModel.h; path = Code/Nooga/NoogaModel.h; sourceTree = "<group>"; };
+		E4E30555163370D000E661DE /* NoogaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaModel.m; path = Code/Nooga/NoogaModel.m; sourceTree = "<group>"; };
+		E4E30566163387C500E661DE /* AKObservable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKObservable.h; sourceTree = "<group>"; };
+		E4E30567163387C500E661DE /* AKObservable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKObservable.m; sourceTree = "<group>"; };
+		E4E30568163387C500E661DE /* AKWeakItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKWeakItem.h; sourceTree = "<group>"; };
+		E4E30569163387C500E661DE /* AKWeakItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKWeakItem.m; sourceTree = "<group>"; };
+		E4E3056A163387C500E661DE /* NSMutableArray+AK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+AK.h"; sourceTree = "<group>"; };
+		E4E3056B163387C500E661DE /* NSMutableArray+AK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+AK.m"; sourceTree = "<group>"; };
+		E4E3056C163387C500E661DE /* NSString+AK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AK.h"; sourceTree = "<group>"; };
+		E4E3056D163387C500E661DE /* NSString+AK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AK.m"; sourceTree = "<group>"; };
+		E4E3056F163387C500E661DE /* FireplugTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireplugTableViewCell.h; sourceTree = "<group>"; };
+		E4E30570163387C500E661DE /* FireplugTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireplugTableViewCell.m; sourceTree = "<group>"; };
+		E4E30571163387C500E661DE /* FPDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPDataStore.h; sourceTree = "<group>"; };
+		E4E30572163387C500E661DE /* FPDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPDataStore.m; sourceTree = "<group>"; };
+		E4E30573163387C500E661DE /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		E4E30574163387C500E661DE /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		E4E30575163387C500E661DE /* TableViewControllerSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerSection.h; sourceTree = "<group>"; };
+		E4E30576163387C500E661DE /* TableViewControllerSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerSection.m; sourceTree = "<group>"; };
+		E4E3057F1633889900E661DE /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		E4E305801633889A00E661DE /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		E4E305821633896100E661DE /* NSMutableArray+WeakReferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+WeakReferences.h"; sourceTree = "<group>"; };
+		E4E305831633896100E661DE /* NSMutableArray+WeakReferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+WeakReferences.m"; sourceTree = "<group>"; };
+		E4E3058516338B2300E661DE /* NoogaArticleControllerArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleControllerArticle.h; path = Code/Modules/Article/Controller/NoogaArticleControllerArticle.h; sourceTree = "<group>"; };
+		E4E3058616338B2300E661DE /* NoogaArticleControllerArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleControllerArticle.m; path = Code/Modules/Article/Controller/NoogaArticleControllerArticle.m; sourceTree = "<group>"; };
+		E4E3058816338FF600E661DE /* NoogaArticleViewArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleViewArticleCell.h; path = Code/Modules/Article/View/NoogaArticleViewArticleCell.h; sourceTree = "<group>"; };
+		E4E3058916338FF600E661DE /* NoogaArticleViewArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleViewArticleCell.m; path = Code/Modules/Article/View/NoogaArticleViewArticleCell.m; sourceTree = "<group>"; };
+		E4E3058F1633952F00E661DE /* NoogaHomeControllerHomeTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaHomeControllerHomeTable.h; path = Code/Modules/Home/Controller/NoogaHomeControllerHomeTable.h; sourceTree = "<group>"; };
+		E4E305901633952F00E661DE /* NoogaHomeControllerHomeTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaHomeControllerHomeTable.m; path = Code/Modules/Home/Controller/NoogaHomeControllerHomeTable.m; sourceTree = "<group>"; };
+		E4E30592163395A400E661DE /* NoogaArticleViewArticleSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleViewArticleSection.h; path = Code/Modules/Article/View/NoogaArticleViewArticleSection.h; sourceTree = "<group>"; };
+		E4E30593163395A400E661DE /* NoogaArticleViewArticleSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleViewArticleSection.m; path = Code/Modules/Article/View/NoogaArticleViewArticleSection.m; sourceTree = "<group>"; };
+		E4E3059516339E8500E661DE /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = "nooga-ios/Submodules/SDWebImage/SDWebImage.xcodeproj"; sourceTree = "<group>"; };
+		E4E305A716339EED00E661DE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		E4E305B01633B54B00E661DE /* NoogaArticleViewArticleSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleViewArticleSectionHeader.h; path = Code/Modules/Article/View/NoogaArticleViewArticleSectionHeader.h; sourceTree = "<group>"; };
+		E4E305B11633B54C00E661DE /* NoogaArticleViewArticleSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleViewArticleSectionHeader.m; path = Code/Modules/Article/View/NoogaArticleViewArticleSectionHeader.m; sourceTree = "<group>"; };
+		E4E305B31633B5A800E661DE /* FireplugDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireplugDraw.h; sourceTree = "<group>"; };
+		E4E305B41633B5A800E661DE /* FireplugDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireplugDraw.m; sourceTree = "<group>"; };
+		E4E305B51633B5A800E661DE /* UIColor+CreateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CreateMethods.h"; sourceTree = "<group>"; };
+		E4E305B61633B5A800E661DE /* UIColor+CreateMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CreateMethods.m"; sourceTree = "<group>"; };
+		E4E305BB1633B88300E661DE /* stag-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "stag-bold-webfont.ttf"; sourceTree = "<group>"; };
+		E4E305BC1633B88300E661DE /* stag-medium-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "stag-medium-webfont.ttf"; sourceTree = "<group>"; };
+		E4E305BD1633B88300E661DE /* stag-semibold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "stag-semibold-webfont.ttf"; sourceTree = "<group>"; };
+		E4E305C11633C19100E661DE /* NoogaArticleViewArticleWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleViewArticleWebView.h; path = Code/Modules/Article/View/NoogaArticleViewArticleWebView.h; sourceTree = "<group>"; };
+		E4E305C21633C19200E661DE /* NoogaArticleViewArticleWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleViewArticleWebView.m; path = Code/Modules/Article/View/NoogaArticleViewArticleWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +201,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E305AF16339F4E00E661DE /* libSDWebImage.a in Frameworks */,
+				E4E305A916339EFB00E661DE /* ImageIO.framework in Frameworks */,
+				E4E3052316334D5D00E661DE /* libRestKit.a in Frameworks */,
+				E4E3052216334D4700E661DE /* QuartzCore.framework in Frameworks */,
+				E4E3051F16334D2700E661DE /* libxml2.dylib in Frameworks */,
+				E4E3051D16334D1C00E661DE /* SystemConfiguration.framework in Frameworks */,
+				E4E3051A16334D0900E661DE /* MobileCoreServices.framework in Frameworks */,
+				E4E3051716334CF500E661DE /* Security.framework in Frameworks */,
+				E4E3051416334CE100E661DE /* CoreData.framework in Frameworks */,
+				E4E3051116334CC900E661DE /* CFNetwork.framework in Frameworks */,
 				E4E304D71633491100E661DE /* UIKit.framework in Frameworks */,
 				E4E304D91633491100E661DE /* Foundation.framework in Frameworks */,
 				E4E304DB1633491100E661DE /* CoreGraphics.framework in Frameworks */,
@@ -51,6 +223,8 @@
 		E4E304C71633491100E661DE = {
 			isa = PBXGroup;
 			children = (
+				E4E3059516339E8500E661DE /* SDWebImage.xcodeproj */,
+				E4E304F716334BCC00E661DE /* RestKit.xcodeproj */,
 				E4E304DC1633491100E661DE /* nooga-ios */,
 				E4E304D51633491100E661DE /* Frameworks */,
 				E4E304D31633491100E661DE /* Products */,
@@ -68,6 +242,14 @@
 		E4E304D51633491100E661DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4E305A716339EED00E661DE /* ImageIO.framework */,
+				E4E3052016334D3B00E661DE /* QuartzCore.framework */,
+				E4E3051E16334D2700E661DE /* libxml2.dylib */,
+				E4E3051B16334D1500E661DE /* SystemConfiguration.framework */,
+				E4E3051816334D0000E661DE /* MobileCoreServices.framework */,
+				E4E3051516334CEB00E661DE /* Security.framework */,
+				E4E3051216334CD800E661DE /* CoreData.framework */,
+				E4E3050F16334CB600E661DE /* CFNetwork.framework */,
 				E4E304D61633491100E661DE /* UIKit.framework */,
 				E4E304D81633491100E661DE /* Foundation.framework */,
 				E4E304DA1633491100E661DE /* CoreGraphics.framework */,
@@ -78,6 +260,8 @@
 		E4E304DC1633491100E661DE /* nooga-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E4E305B91633B88200E661DE /* Resources */,
+				E4E305481633575C00E661DE /* Code */,
 				E4E304E51633491100E661DE /* AppDelegate.h */,
 				E4E304E61633491100E661DE /* AppDelegate.m */,
 				E4E304DD1633491100E661DE /* Supporting Files */,
@@ -99,6 +283,186 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E4E304F816334BCC00E661DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4E3050316334BCD00E661DE /* libRestKit.a */,
+				E4E3050516334BCD00E661DE /* RestKitTests.octest */,
+				E4E3050716334BCD00E661DE /* RestKit.framework */,
+				E4E3050916334BCD00E661DE /* RestKitFrameworkTests.octest */,
+				E4E3050B16334BCD00E661DE /* RestKitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4E305481633575C00E661DE /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				E4E30565163387C500E661DE /* Akimbo */,
+				E4E3056E163387C500E661DE /* Fireplug */,
+				E4E30553163370A400E661DE /* Nooga */,
+				E4E305491633576800E661DE /* Modules */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+		E4E305491633576800E661DE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E4E3054A1633578000E661DE /* Article */,
+				E4E3058D1633944200E661DE /* Home */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		E4E3054A1633578000E661DE /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				E4E3054B1633581A00E661DE /* Model */,
+				E4E3058C1633900C00E661DE /* Controller */,
+				E4E3058B16338FFB00E661DE /* View */,
+			);
+			name = Article;
+			sourceTree = "<group>";
+		};
+		E4E3054B1633581A00E661DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4E3054C1633586400E661DE /* NoogaArticleModelArticle.h */,
+				E4E3054D1633586400E661DE /* NoogaArticleModelArticle.m */,
+				E4E305501633695F00E661DE /* NoogaArticleModelCategory.h */,
+				E4E305511633695F00E661DE /* NoogaArticleModelCategory.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E4E30553163370A400E661DE /* Nooga */ = {
+			isa = PBXGroup;
+			children = (
+				E4E3055E163379F700E661DE /* Views */,
+				E4E30554163370D000E661DE /* NoogaModel.h */,
+				E4E30555163370D000E661DE /* NoogaModel.m */,
+			);
+			name = Nooga;
+			sourceTree = "<group>";
+		};
+		E4E3055E163379F700E661DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			path = Code/Nooga/Views;
+			sourceTree = "<group>";
+		};
+		E4E30565163387C500E661DE /* Akimbo */ = {
+			isa = PBXGroup;
+			children = (
+				E4E305821633896100E661DE /* NSMutableArray+WeakReferences.h */,
+				E4E305831633896100E661DE /* NSMutableArray+WeakReferences.m */,
+				E4E30566163387C500E661DE /* AKObservable.h */,
+				E4E30567163387C500E661DE /* AKObservable.m */,
+				E4E30568163387C500E661DE /* AKWeakItem.h */,
+				E4E30569163387C500E661DE /* AKWeakItem.m */,
+				E4E3056A163387C500E661DE /* NSMutableArray+AK.h */,
+				E4E3056B163387C500E661DE /* NSMutableArray+AK.m */,
+				E4E3056C163387C500E661DE /* NSString+AK.h */,
+				E4E3056D163387C500E661DE /* NSString+AK.m */,
+			);
+			name = Akimbo;
+			path = Code/Akimbo;
+			sourceTree = "<group>";
+		};
+		E4E3056E163387C500E661DE /* Fireplug */ = {
+			isa = PBXGroup;
+			children = (
+				E4E305B31633B5A800E661DE /* FireplugDraw.h */,
+				E4E305B41633B5A800E661DE /* FireplugDraw.m */,
+				E4E305B51633B5A800E661DE /* UIColor+CreateMethods.h */,
+				E4E305B61633B5A800E661DE /* UIColor+CreateMethods.m */,
+				E4E3057F1633889900E661DE /* Utils.h */,
+				E4E305801633889A00E661DE /* Utils.m */,
+				E4E3056F163387C500E661DE /* FireplugTableViewCell.h */,
+				E4E30570163387C500E661DE /* FireplugTableViewCell.m */,
+				E4E30571163387C500E661DE /* FPDataStore.h */,
+				E4E30572163387C500E661DE /* FPDataStore.m */,
+				E4E30573163387C500E661DE /* TableViewController.h */,
+				E4E30574163387C500E661DE /* TableViewController.m */,
+				E4E30575163387C500E661DE /* TableViewControllerSection.h */,
+				E4E30576163387C500E661DE /* TableViewControllerSection.m */,
+			);
+			name = Fireplug;
+			path = Code/Fireplug;
+			sourceTree = "<group>";
+		};
+		E4E3058B16338FFB00E661DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4E3058816338FF600E661DE /* NoogaArticleViewArticleCell.h */,
+				E4E3058916338FF600E661DE /* NoogaArticleViewArticleCell.m */,
+				E4E30592163395A400E661DE /* NoogaArticleViewArticleSection.h */,
+				E4E30593163395A400E661DE /* NoogaArticleViewArticleSection.m */,
+				E4E305B01633B54B00E661DE /* NoogaArticleViewArticleSectionHeader.h */,
+				E4E305B11633B54C00E661DE /* NoogaArticleViewArticleSectionHeader.m */,
+				E4E305C11633C19100E661DE /* NoogaArticleViewArticleWebView.h */,
+				E4E305C21633C19200E661DE /* NoogaArticleViewArticleWebView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E4E3058C1633900C00E661DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4E3058516338B2300E661DE /* NoogaArticleControllerArticle.h */,
+				E4E3058616338B2300E661DE /* NoogaArticleControllerArticle.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E4E3058D1633944200E661DE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E4E3058E1633949500E661DE /* Controller */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		E4E3058E1633949500E661DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4E3058F1633952F00E661DE /* NoogaHomeControllerHomeTable.h */,
+				E4E305901633952F00E661DE /* NoogaHomeControllerHomeTable.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E4E3059616339E8500E661DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4E305A016339E8500E661DE /* libSDWebImage.a */,
+				E4E305A216339E8500E661DE /* libSDWebImage.a */,
+				E4E305A416339E8500E661DE /* libSDWebImageARC+MKAnnotation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4E305B91633B88200E661DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4E305BA1633B88300E661DE /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E4E305BA1633B88300E661DE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E4E305BB1633B88300E661DE /* stag-bold-webfont.ttf */,
+				E4E305BC1633B88300E661DE /* stag-medium-webfont.ttf */,
+				E4E305BD1633B88300E661DE /* stag-semibold-webfont.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +477,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				E4E305AE16339F4800E661DE /* PBXTargetDependency */,
+				E4E3050E16334C9800E661DE /* PBXTargetDependency */,
 			);
 			name = "nooga-ios";
 			productName = "nooga-ios";
@@ -138,12 +504,81 @@
 			mainGroup = E4E304C71633491100E661DE;
 			productRefGroup = E4E304D31633491100E661DE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4E304F816334BCC00E661DE /* Products */;
+					ProjectRef = E4E304F716334BCC00E661DE /* RestKit.xcodeproj */;
+				},
+				{
+					ProductGroup = E4E3059616339E8500E661DE /* Products */;
+					ProjectRef = E4E3059516339E8500E661DE /* SDWebImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E4E304D11633491100E661DE /* nooga-ios */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4E3050316334BCD00E661DE /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = E4E3050216334BCD00E661DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4E3050516334BCD00E661DE /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = E4E3050416334BCD00E661DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4E3050716334BCD00E661DE /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = E4E3050616334BCD00E661DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4E3050916334BCD00E661DE /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = E4E3050816334BCD00E661DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4E3050B16334BCD00E661DE /* RestKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitResources.bundle;
+			remoteRef = E4E3050A16334BCD00E661DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4E305A016339E8500E661DE /* libSDWebImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDWebImage.a;
+			remoteRef = E4E3059F16339E8500E661DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4E305A216339E8500E661DE /* libSDWebImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDWebImage.a;
+			remoteRef = E4E305A116339E8500E661DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4E305A416339E8500E661DE /* libSDWebImageARC+MKAnnotation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSDWebImageARC+MKAnnotation.a";
+			remoteRef = E4E305A316339E8500E661DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E4E304D01633491100E661DE /* Resources */ = {
@@ -154,6 +589,9 @@
 				E4E304E91633491100E661DE /* Default.png in Resources */,
 				E4E304EB1633491100E661DE /* Default@2x.png in Resources */,
 				E4E304ED1633491100E661DE /* Default-568h@2x.png in Resources */,
+				E4E305BE1633B88300E661DE /* stag-bold-webfont.ttf in Resources */,
+				E4E305BF1633B88300E661DE /* stag-medium-webfont.ttf in Resources */,
+				E4E305C01633B88300E661DE /* stag-semibold-webfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,10 +604,44 @@
 			files = (
 				E4E304E31633491100E661DE /* main.m in Sources */,
 				E4E304E71633491100E661DE /* AppDelegate.m in Sources */,
+				E4E3054E1633586400E661DE /* NoogaArticleModelArticle.m in Sources */,
+				E4E305521633695F00E661DE /* NoogaArticleModelCategory.m in Sources */,
+				E4E30556163370D000E661DE /* NoogaModel.m in Sources */,
+				E4E30577163387C500E661DE /* AKObservable.m in Sources */,
+				E4E30578163387C500E661DE /* AKWeakItem.m in Sources */,
+				E4E30579163387C500E661DE /* NSMutableArray+AK.m in Sources */,
+				E4E3057A163387C500E661DE /* NSString+AK.m in Sources */,
+				E4E3057B163387C500E661DE /* FireplugTableViewCell.m in Sources */,
+				E4E3057C163387C500E661DE /* FPDataStore.m in Sources */,
+				E4E3057D163387C500E661DE /* TableViewController.m in Sources */,
+				E4E3057E163387C500E661DE /* TableViewControllerSection.m in Sources */,
+				E4E305811633889A00E661DE /* Utils.m in Sources */,
+				E4E305841633896100E661DE /* NSMutableArray+WeakReferences.m in Sources */,
+				E4E3058716338B2300E661DE /* NoogaArticleControllerArticle.m in Sources */,
+				E4E3058A16338FF600E661DE /* NoogaArticleViewArticleCell.m in Sources */,
+				E4E305911633952F00E661DE /* NoogaHomeControllerHomeTable.m in Sources */,
+				E4E30594163395A400E661DE /* NoogaArticleViewArticleSection.m in Sources */,
+				E4E305B21633B54C00E661DE /* NoogaArticleViewArticleSectionHeader.m in Sources */,
+				E4E305B71633B5A800E661DE /* FireplugDraw.m in Sources */,
+				E4E305B81633B5A800E661DE /* UIColor+CreateMethods.m in Sources */,
+				E4E305C31633C19200E661DE /* NoogaArticleViewArticleWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4E3050E16334C9800E661DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = E4E3050D16334C9800E661DE /* PBXContainerItemProxy */;
+		};
+		E4E305AE16339F4800E661DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SDWebImage ARC";
+			targetProxy = E4E305AD16339F4800E661DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E4E304DF1633491100E661DE /* InfoPlist.strings */ = {
@@ -192,6 +664,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -205,7 +678,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -226,8 +705,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -239,8 +723,13 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nooga-ios/nooga-ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "nooga-ios/nooga-ios-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -251,8 +740,13 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nooga-ios/nooga-ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "nooga-ios/nooga-ios-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -277,6 +771,7 @@
 				E4E304F21633491100E661DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

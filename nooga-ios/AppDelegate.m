@@ -7,12 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import <RestKit/RestKit.h>
+#import "NoogaHomeControllerHomeTable.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Create the window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //Create the aticle table
+    NoogaHomeControllerHomeTable *home = [[NoogaHomeControllerHomeTable alloc] init];
+    home.navigationItem.title = @"Nooga";
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:home];
+    [navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
+    [self.window setRootViewController:navigationController];
+    
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
