@@ -14,6 +14,10 @@
 @synthesize content;
 @synthesize excerpt;
 
+//Image
+@synthesize thumbImage;
+@synthesize mediumImage;
+
 //Statics
 + (RKObjectMapping *)objectMapper
 {

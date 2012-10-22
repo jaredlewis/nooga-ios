@@ -12,6 +12,7 @@
 
 @interface NoogaArticleModelCategory : NoogaModel
 
+@property (nonatomic) NSString *categoryId;
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSSet *articles;
 

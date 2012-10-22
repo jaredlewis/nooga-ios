@@ -64,6 +64,10 @@
     [section setHeader:header];
     [section setHeaderHeight:header.frame.size.height];
     
+    //Add tap gesture to header
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showCategory)];
+    [header addGestureRecognizer:tap];
+    
     //Set the header color
     NSString *categoryName = [category.name lowercaseString];
     NSLog(@"%@", categoryName);
@@ -95,6 +99,11 @@
     
     //Add Section
     [self addSection:section];
+}
+
+- (void)showCategory
+{
+    NSLog(@"show category");
 }
 
 ////////////////////////////////////////////////////////////
