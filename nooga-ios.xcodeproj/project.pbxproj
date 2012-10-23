@@ -51,6 +51,9 @@
 		E4E305C01633B88300E661DE /* stag-semibold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4E305BD1633B88300E661DE /* stag-semibold-webfont.ttf */; };
 		E4E305C31633C19200E661DE /* NoogaArticleViewArticleWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305C21633C19200E661DE /* NoogaArticleViewArticleWebView.m */; };
 		F5B03CD71635F87700D0BD45 /* NoogaArticleControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B03CD61635F87700D0BD45 /* NoogaArticleControllerCategory.m */; };
+		F5DB339E1636E6EA00E79686 /* ApiOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DB339D1636E6EA00E79686 /* ApiOperation.m */; };
+		F5DB33A11636E70900E79686 /* CrudOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DB33A01636E70900E79686 /* CrudOperation.m */; };
+		F5DB33A41636E78300E79686 /* ArticleApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DB33A31636E78300E79686 /* ArticleApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +200,12 @@
 		E4E305C21633C19200E661DE /* NoogaArticleViewArticleWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleViewArticleWebView.m; path = Code/Modules/Article/View/NoogaArticleViewArticleWebView.m; sourceTree = "<group>"; };
 		F5B03CD61635F87700D0BD45 /* NoogaArticleControllerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleControllerCategory.m; path = Code/Modules/Article/Controller/NoogaArticleControllerCategory.m; sourceTree = "<group>"; };
 		F5B03CD81635FA2A00D0BD45 /* NoogaArticleControllerCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleControllerCategory.h; path = Code/Modules/Article/Controller/NoogaArticleControllerCategory.h; sourceTree = "<group>"; };
+		F5DB339C1636E6EA00E79686 /* ApiOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApiOperation.h; path = Code/ApiOperation.h; sourceTree = "<group>"; };
+		F5DB339D1636E6EA00E79686 /* ApiOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApiOperation.m; path = Code/ApiOperation.m; sourceTree = "<group>"; };
+		F5DB339F1636E70900E79686 /* CrudOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrudOperation.h; path = Code/CrudOperation.h; sourceTree = "<group>"; };
+		F5DB33A01636E70900E79686 /* CrudOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrudOperation.m; path = Code/CrudOperation.m; sourceTree = "<group>"; };
+		F5DB33A21636E78300E79686 /* ArticleApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleApi.h; path = Code/ArticleApi.h; sourceTree = "<group>"; };
+		F5DB33A31636E78300E79686 /* ArticleApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleApi.m; path = Code/ArticleApi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +314,12 @@
 				E4E3056E163387C500E661DE /* Fireplug */,
 				E4E30553163370A400E661DE /* Nooga */,
 				E4E305491633576800E661DE /* Modules */,
+				F5DB339C1636E6EA00E79686 /* ApiOperation.h */,
+				F5DB339D1636E6EA00E79686 /* ApiOperation.m */,
+				F5DB339F1636E70900E79686 /* CrudOperation.h */,
+				F5DB33A01636E70900E79686 /* CrudOperation.m */,
+				F5DB33A21636E78300E79686 /* ArticleApi.h */,
+				F5DB33A31636E78300E79686 /* ArticleApi.m */,
 			);
 			name = Code;
 			sourceTree = "<group>";
@@ -631,6 +646,9 @@
 				E4E305B81633B5A800E661DE /* UIColor+CreateMethods.m in Sources */,
 				E4E305C31633C19200E661DE /* NoogaArticleViewArticleWebView.m in Sources */,
 				F5B03CD71635F87700D0BD45 /* NoogaArticleControllerCategory.m in Sources */,
+				F5DB339E1636E6EA00E79686 /* ApiOperation.m in Sources */,
+				F5DB33A11636E70900E79686 /* CrudOperation.m in Sources */,
+				F5DB33A41636E78300E79686 /* ArticleApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

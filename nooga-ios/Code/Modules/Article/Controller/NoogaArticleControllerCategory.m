@@ -6,15 +6,45 @@
 //  Copyright (c) 2012 Jared Lewis. All rights reserved.
 //
 
+
 #import "NoogaArticleModelArticle.h"
 #import "NoogaArticleModelCategory.h"
 #import "NoogaArticleControllerCategory.h"
 #import "NoogaArticleViewArticleSection.h"
 #import "NoogaArticleViewArticleWebView.h"
+#import "ArticleApi.h"
+
+@interface Unit : NoogaModel
+@property (nonatomic) NSString *unitId;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *zip;
+@end
+
+@implementation Unit
+@synthesize unitId;
+@synthesize name;
+@synthesize zip;
+
++ (RKObjectMapping *)objectMapper
+{
+    RKObjectMapping *objectMapper = [RKObjectMapping mappingForClass:[self class]];
+    [objectMapper mapKeyPathsToAttributes:
+     @"id", @"unitId",
+     @"name", @"name",
+     @"zip_code", @"zip",
+     nil];
+    return objectMapper;
+}
+@end
 
 @implementation NoogaArticleControllerCategory
 
+@synthesize articleApi;
 @synthesize articleSection;
+
+@synthesize wesClient;
+@synthesize unitManager;
+@synthesize testUnit;
 
 - (void)initSections
 {
@@ -30,34 +60,22 @@
 {
     [super viewDidLoad];
     
-    //Create the client
-    RKClient *categoryClient = [RKClient sharedClient];
+    articleApi = [[ArticleApi alloc] init];
+    [articleApi setValue:self.category.categoryId forParam:@"category"];
+    [articleApi addSorterProperty:@"updated_at" ascending:NO];
     
-    //Create a mapping provider
-    RKObjectManager *homepageObjectManager = [[RKObjectManager alloc] initWithBaseURL:categoryClient.baseURL];
-    [homepageObjectManager setClient:categoryClient];
-    
-    //Article Mapping
-    RKObjectMapping *articleMapper = [NoogaArticleModelArticle objectMapper];
-    [homepageObjectManager.mappingProvider setObjectMapping:articleMapper forKeyPath:@"records"];
-    
-    //Load the homepage
-    NSString *urlPath = [NSString stringWithFormat:@"/article/article-api/public?category=%@&sort=[{\"property\":\"updated_at\",\"direction\":\"DESC\"}]", self.category.categoryId];
-    [homepageObjectManager loadObjectsAtResourcePath:urlPath delegate:self];
-}
-
-
-
-////////////////////////////////////////////////////////////
-//  Object loader delegate methods
-////////////////////////////////////////////////////////////
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
-{
-    [self.articleSection.store load:objects];
-}
-
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
-{
+    [articleApi doReadOperationOnSuccess:^(RKObjectLoader *objectLoader, NSArray *objects) {
+        
+        // Load the records into the table view
+        [self.articleSection.store load:objects];
+        
+    } onFailure:^(RKObjectLoader *objectLoader, NSError *error) {
+        
+        
+    } onComplete:^{
+        
+        
+    }];
     
 }
 
@@ -69,6 +87,9 @@
     UIViewController *contentViewController = [[UIViewController alloc] init];
     NoogaArticleViewArticleWebView *webView = [[NoogaArticleViewArticleWebView alloc] init];
     [webView loadArticle:record.articleId];
+    
+    [articleApi doCreateOperationForItem:record onSuccess:nil onFailure:nil onComplete:nil];
+    
     contentViewController.view = webView;
     [self.navigationController pushViewController:contentViewController animated:YES];
 }

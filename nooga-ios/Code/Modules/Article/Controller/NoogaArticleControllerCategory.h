@@ -10,10 +10,17 @@
 #import "TableViewController.h"
 
 @class NoogaArticleViewArticleSection;
+@class ArticleApi;
+@class Unit;
 
-@interface NoogaArticleControllerCategory : TableViewController <RKRequestDelegate, RKObjectLoaderDelegate, TableViewControllerSectionDelegate>
+@interface NoogaArticleControllerCategory : TableViewController <TableViewControllerSectionDelegate, RKRequestDelegate, RKObjectLoaderDelegate>
 
+@property (nonatomic) ArticleApi *articleApi;
 @property (nonatomic) NoogaArticleViewArticleSection *articleSection;
 @property (nonatomic) NoogaArticleModelCategory *category;
+
+@property (nonatomic) RKClient *wesClient;
+@property (nonatomic) RKObjectManager *unitManager;
+@property (nonatomic) Unit *testUnit;
 
 @end

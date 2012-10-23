@@ -17,6 +17,9 @@
     //Create the window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    // Set the shared client baseURL
+    [RKClient clientWithBaseURLString:@"http://nooga.com"];
+    
     //Create the aticle table
     NoogaHomeControllerHomeTable *home = [[NoogaHomeControllerHomeTable alloc] init];
     home.navigationItem.title = @"Nooga";
@@ -28,6 +31,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
