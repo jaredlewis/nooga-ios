@@ -14,37 +14,11 @@
 #import "NoogaArticleViewArticleWebView.h"
 #import "ArticleApi.h"
 
-@interface Unit : NoogaModel
-@property (nonatomic) NSString *unitId;
-@property (nonatomic) NSString *name;
-@property (nonatomic) NSString *zip;
-@end
-
-@implementation Unit
-@synthesize unitId;
-@synthesize name;
-@synthesize zip;
-
-+ (RKObjectMapping *)objectMapper
-{
-    RKObjectMapping *objectMapper = [RKObjectMapping mappingForClass:[self class]];
-    [objectMapper mapKeyPathsToAttributes:
-     @"id", @"unitId",
-     @"name", @"name",
-     @"zip_code", @"zip",
-     nil];
-    return objectMapper;
-}
-@end
-
 @implementation NoogaArticleControllerCategory
 
 @synthesize articleApi;
 @synthesize articleSection;
-
-@synthesize wesClient;
-@synthesize unitManager;
-@synthesize testUnit;
+@synthesize category;
 
 - (void)initSections
 {
@@ -60,22 +34,30 @@
 {
     [super viewDidLoad];
     
-    articleApi = [[ArticleApi alloc] init];
-    [articleApi setValue:self.category.categoryId forParam:@"category"];
+    RKClient *client = [[RKClient alloc] initWithBaseURLString:@"http://127.0.0.1:8000"];
+    articleApi = [[ArticleApi alloc] initWithClient:client];
+    
+    [articleApi setParam:@"category" value:self.category.categoryId];
     [articleApi addSorterProperty:@"updated_at" ascending:NO];
     
-    [articleApi doReadOperationOnSuccess:^(RKObjectLoader *objectLoader, NSArray *objects) {
+//    [articleApi doReadOperationOnSuccess:^(RKObjectLoader *objectLoader, NSArray *objects) {
+//        
+//        // Load the records into the table view
+//        [self.articleSection.store load:objects];
+//        
+//    } onFailure:^(RKObjectLoader *objectLoader, NSError *error) {
+//        
+//        
+//    } onComplete:^{
+//        
+//        
+//    }];
+    
+    [articleApi doGETOperationToApi:@"energy/unit-api/read" withParams:@{@"one":@"two"} onSuccess:^(RKRequest *request, RKResponse *response) {
         
-        // Load the records into the table view
-        [self.articleSection.store load:objects];
-        
-    } onFailure:^(RKObjectLoader *objectLoader, NSError *error) {
-        
-        
-    } onComplete:^{
-        
-        
-    }];
+    } onFailure:nil onComplete:nil];
+    
+    [articleApi doGETOperationToApi:@"nopeenergy/unit-api/read" withParams:@{@"one":@"two"} onSuccess:nil onFailure:nil onComplete:nil];
     
 }
 

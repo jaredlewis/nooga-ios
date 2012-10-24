@@ -6,9 +6,46 @@
 //  Copyright (c) 2012 Jared Lewis. All rights reserved.
 //
 
+#import <RestKit/RestKit.h>
 #import "CrudOperation.h"
 
 @implementation CrudOperation
+
+@synthesize objectManager;
+@synthesize objectMapping;
+@synthesize objectingMappingKeyPath;
+@synthesize objectClass;
+
+- (id)initWithClient:(RKClient *)theClient
+{
+    self = [super initWithClient:theClient];
+    
+    if (self) {
+        [self initDefaults];
+        [self initObjectManager];
+    }
+    
+    return self;
+}
+
+- (void)initDefaults
+{
+    [super initDefaults];
+    self.createAction = @"create";
+    self.readAction = @"read";
+    self.updateAction = @"update";
+    self.deleteAction = @"delete";
+}
+
+- (void)doLoad
+{
+    
+}
+
+- (void)doLoadOperationOnSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock
+{
+    
+}
 
 - (void)doCreateWithItem:(id)item;
 {
@@ -19,20 +56,17 @@
 
 - (void)doCreateOperationForItem:(id)item onSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock
 {
-    __block CrudOperation *blocksafeSelf = self;
-    [self doOperation:^{
-        [blocksafeSelf doCreateWithItem:item];
-    } onSuccess:theSuccessBlock onFailure:theFailureBlock onComplete:theCompleteBlock];
+//    __block CrudOperation *blocksafeSelf = self;
+//    [self doOperation:^{
+//        [blocksafeSelf doCreateWithItem:item];
+//    } onSuccess:theSuccessBlock onFailure:theFailureBlock onComplete:theCompleteBlock];
 }
 
 - (void)initObjectManager
 {
-    //Create the client
-    RKClient *rkClient = [RKClient sharedClient];
-    
     //Create a mapping provider
-    self.objectManager = [[RKObjectManager alloc] initWithBaseURL:rkClient.baseURL];
-    [self.objectManager setClient:rkClient];
+    self.objectManager = [[RKObjectManager alloc] initWithBaseURL:self.client.baseURL];
+    [self.objectManager setClient:self.client];
     
     //Article Mapping
     [self.objectManager.mappingProvider setObjectMapping:self.objectMapping forKeyPath:self.objectingMappingKeyPath];
@@ -98,18 +132,28 @@
     } onSuccess:theSuccessBlock onFailure:theFailureBlock onComplete:theCompleteBlock];
 }
 
-- (void)request:(RKRequest *)request didFailLoadWithError:(NSError *)error
+#pragma mark - RKObjectLoaderDelegate
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
 {
-    NSLog(@"failed %@", error);
+//    if (self.successBlock) {
+//        self.successBlock(objectLoader, objects);
+//    }
+//    
+//    if (self.completeBlock) {
+//        self.completeBlock();
+//    }
 }
 
-- (void)requestWillPrepareForSend:(RKRequest *)request
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
-    NSLog(@"will prepare %@", request);
-}
-
-- (void)request:(RKRequest*)request didLoadResponse:(RKResponse*)response {
-    NSLog(@"request = %@ response = %@", request, [response bodyAsString]);
+//    if (self.failureBlock) {
+//        self.failureBlock(objectLoader, error);
+//    }
+//    
+//    if (self.completeBlock) {
+//        self.completeBlock();
+//    }
 }
 
 @end

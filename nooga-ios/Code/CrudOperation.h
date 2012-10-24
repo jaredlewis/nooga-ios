@@ -8,19 +8,32 @@
 
 #import "ApiOperation.h"
 
-@interface CrudOperation : ApiOperation
+@interface CrudOperation : ApiOperation <RKObjectLoaderDelegate>
 
-- (void)doCreateWithItem:(id)item;
-- (void)doCreateOperationForItem:(id)item onSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock;
+@property (nonatomic) RKObjectManager *objectManager;
+@property (nonatomic) RKObjectMapping *objectMapping;
+@property (nonatomic) NSString *objectingMappingKeyPath;
+@property (nonatomic) Class objectClass;
 
-- (void)doRead;
-- (void)doReadOperationOnSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock;
+@property (nonatomic) NSString *createAction;
+@property (nonatomic) NSString *readAction;
+@property (nonatomic) NSString *updateAction;
+@property (nonatomic) NSString *deleteAction;
 
-- (void)doUpdateWithItem:(id)item;
-- (void)doUpdateOperationForItem:(id)item onSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock;
+- (void)doLoad;
+- (void)doLoadOperationOnSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock;
 
-- (void)doDeleteWithItem:(id)item;
-- (void)doDeleteOperationForItem:(id)item onSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock;
+//- (void)doCreateWithItem:(id)item;
+//- (void)doCreateOperationForItem:(id)item onSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock;
+//
+//- (void)doRead;
+//- (void)doReadOperationOnSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock;
+//
+//- (void)doUpdateWithItem:(id)item;
+//- (void)doUpdateOperationForItem:(id)item onSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock;
+//
+//- (void)doDeleteWithItem:(id)item;
+//- (void)doDeleteOperationForItem:(id)item onSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock;
 
 
 

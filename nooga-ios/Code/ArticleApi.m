@@ -11,18 +11,25 @@
 
 @implementation ArticleApi
 
-- (id)init
+- (id)initWithClient:(RKClient *)theClient
 {
-    self = [super init];
+    self = [super initWithClient:theClient];
     
     if (self) {
-        self.apiPath = @"article/article-api";
-        self.objectingMappingKeyPath = @"records";
-        self.objectMapping = [NoogaArticleModelArticle objectMapper];
-        self.objectClass = [NoogaArticleModelArticle class];
+        [self initDefaults];
     }
     
     return self;
+}
+
+- (void)initDefaults
+{
+    [super initDefaults];
+    
+    self.apiPath = @"article/article-api";
+    self.objectingMappingKeyPath = @"records";
+    self.objectMapping = [NoogaArticleModelArticle objectMapper];
+    self.objectClass = [NoogaArticleModelArticle class];
 }
 
 @end

@@ -9,25 +9,25 @@
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
 
-@interface ApiOperation : NSObject <RKRequestDelegate, RKObjectLoaderDelegate>
+@interface ApiOperation : NSObject <RKRequestDelegate>
 
-@property (nonatomic) RKObjectManager *objectManager;
+@property (nonatomic) RKClient *client;
 @property (nonatomic) NSString *apiPath;
-@property (nonatomic) RKObjectMapping *objectMapping;
-@property (nonatomic) NSString *objectingMappingKeyPath;
-@property (nonatomic) Class objectClass;
-@property (nonatomic, copy) void(^successBlock)(RKObjectLoader *objectLoader, NSArray *objects);
-@property (nonatomic, copy) void(^failureBlock)(RKObjectLoader *objectLoader, NSError *error);
-@property (nonatomic, copy) void(^completeBlock)(void);
 @property (nonatomic) NSMutableDictionary *params;
 @property (nonatomic) NSMutableArray *sorters;
+@property (nonatomic) NSMutableDictionary *operations;
 
-- (void)doOperation:(void(^)(void))theOperationBlock onSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock;
+- (id)initWithClient:(RKClient *)theClient;
+- (void)initDefaults
+
+- (void)doOperation:(id)theOperationBlock onSuccess:(id) theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock;
+
+- (void)doGETOperationToApi:(NSString *)resourcePath withParams:(NSDictionary *)theParams onSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock;
 
 - (NSString *)paramString;
 - (NSDictionary *)getPostParams;
 
-- (void)setValue:(NSString *)value forParam:(NSString *)param;
+- (void)setParam:(NSString *)key value:(NSString *)value;
 - (void)addSorterProperty:(NSString *)property ascending:(BOOL)isAscending;
 
 @end

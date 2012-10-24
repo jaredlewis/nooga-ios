@@ -7,43 +7,85 @@
 //
 
 #import <RestKit/RKJSONParserJSONKit.h>
+#import <RestKit/RestKit.h>
+#import <RestKit/RKRequestSerialization.h>
 #import "ApiOperation.h"
 
 @implementation ApiOperation
 
-@synthesize objectManager;
+
+@synthesize client;
 @synthesize apiPath;
-@synthesize objectMapping;
-@synthesize objectingMappingKeyPath;
-@synthesize objectClass;
-@synthesize successBlock;
-@synthesize failureBlock;
-@synthesize completeBlock;
+
 @synthesize params;
 @synthesize sorters;
 
-- (id)init
+@synthesize operations;
+
+- (id)initWithClient:(RKClient *)theClient
 {
     self = [super init];
     
     if (self) {
-        self.params = [[NSMutableDictionary alloc] init];
-        self.sorters = [[NSMutableArray alloc] init];
+        self.client = theClient;
+        [self initDefaults];
     }
     
     return self;
 }
 
-- (void)doOperation:(void(^)(void))theOperationBlock onSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock
+- (void)initDefaults
 {
-    self.successBlock = theSuccessBlock;
-    self.failureBlock = theFailureBlock;
-    self.completeBlock = theCompleteBlock;
+    self.params = [[NSMutableDictionary alloc] init];
+    self.sorters = [[NSMutableArray alloc] init];
+    self.operations = [[NSMutableDictionary alloc] init];
+}
+
+- (id)init
+{
+    self = [self initWithClient:[RKClient sharedClient]];
+    return self;
+}
+
+- (void)doOperation:(id)theOperationBlock onSuccess:(id) theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock
+{
     
     if (theOperationBlock) {
-        theOperationBlock();
+        
     }
 }
+
+- (void)doGETOperationToApi:(NSString *)resourcePath withParams:(NSDictionary *)theParams onSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock
+{
+    RKRequest *request = [self.client get:resourcePath queryParameters:theParams delegate:self];
+    [self addOperation:request
+           onSuccess:theSuccessBlock
+           onFailure:theFailureBlock
+          onComplete:theCompleteBlock];
+}
+
+- (void)addOperation:(id)operation onSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock
+{
+    NSMutableDictionary *callbacks = [[NSMutableDictionary alloc] init];
+    [callbacks setValue:operation forKey:@"operation"];
+    [callbacks setValue:theSuccessBlock forKey:@"onSuccess"];
+    [callbacks setValue:theFailureBlock forKey:@"onFailure"];
+    [callbacks setValue:theCompleteBlock forKey:@"onComplete"];
+    [self.operations setValue:callbacks forKey:[operation description]];
+}
+
+- (NSDictionary *)getOperationCallbacks:(id)operation
+{
+    return [self.operations objectForKey:[operation description]];
+}
+
+- (void)removeOperation:(id)operation
+{
+    [self.operations removeObjectForKey:[operation description]];
+}
+
+
+
 
 - (NSString *)urlEncode:(NSString *)theString
 {
@@ -74,9 +116,9 @@
     return paramString;
 }
 
-- (void)setValue:(NSString *)value forParam:(NSString *)param
+- (void)setParam:(NSString *)key value:(NSString *)value;
 {
-    [self.params setValue:value forKey:param];
+    [self.params setValue:value forKey:key];
 }
 
 - (void)addSorterProperty:(NSString *)property ascending:(BOOL)isAscending
@@ -91,36 +133,68 @@
     [self.sorters addObject:sorter];
 }
 
-////////////////////////////////////////////////////////////
-//  Object loader delegate methods
-////////////////////////////////////////////////////////////
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
-{
-    if (self.successBlock) {
-        self.successBlock(objectLoader, objects);
-    }
-    
-    if (self.completeBlock) {
-        self.completeBlock();
-    }
-}
+#pragma mark - RKRequestDelegate
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
 {
-    if (self.failureBlock) {
-        self.failureBlock(objectLoader, error);
-    }
-    
-    if (self.completeBlock) {
-        self.completeBlock();
-    }
-}
-
-- (void)request:(RKRequest*)request didLoadResponse:(RKResponse*)response {
     NSLog(@"request = %@ response = %@", request, response);
+    NSLog(@"Success");
+    NSDictionary *operationCallbacks = [self getOperationCallbacks:request];
+    if ([operationCallbacks objectForKey:@"onSuccess"]) {
+        ((void (^)(RKRequest *request, RKResponse *response))[operationCallbacks objectForKey:@"onSuccess"])(request, response);
+    }
+    if ([operationCallbacks objectForKey:@"onComplete"]) {
+        ((void (^)(RKRequest *request, RKResponse *response))[operationCallbacks objectForKey:@"onComplete"])(request, response);
+    }
+    
+    [self removeOperation:request];
 }
 
 - (void)request:(RKRequest *)request didFailLoadWithError:(NSError *)error
+{
+    NSDictionary *operationCallbacks = [self getOperationCallbacks:request];
+    if (operationCallbacks == nil) {
+        return;
+    }
+    
+    ((void (^)(RKRequest *request, NSError *error))[operationCallbacks objectForKey:@"onFailure"])(request, error);
+    ((void (^)(void))[operationCallbacks objectForKey:@"onComplete"])();
+    
+    [self removeOperation:request];
+}
+
+
+- (void)request:(RKRequest *)request didReceiveData:(NSInteger)bytesReceived totalBytesReceived:(NSInteger)totalBytesReceived totalBytesExpectedToReceive:(NSInteger)totalBytesExpectedToReceive
+{
+    
+}
+
+- (void)request:(RKRequest *)request didReceiveResponse:(RKResponse *)response
+{
+    
+}
+
+- (void)request:(RKRequest *)request didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
+{
+    
+}
+
+- (void)requestDidCancelLoad:(RKRequest *)request
+{
+    
+}
+
+- (void)requestDidStartLoad:(RKRequest *)request
+{
+    
+}
+
+- (void)requestDidTimeout:(RKRequest *)request
+{
+    
+}
+
+- (void)requestWillPrepareForSend:(RKRequest *)request
 {
     
 }

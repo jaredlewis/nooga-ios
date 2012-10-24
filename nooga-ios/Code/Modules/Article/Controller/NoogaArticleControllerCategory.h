@@ -13,14 +13,10 @@
 @class ArticleApi;
 @class Unit;
 
-@interface NoogaArticleControllerCategory : TableViewController <TableViewControllerSectionDelegate, RKRequestDelegate, RKObjectLoaderDelegate>
+@interface NoogaArticleControllerCategory : TableViewController <TableViewControllerSectionDelegate>
 
 @property (nonatomic) ArticleApi *articleApi;
 @property (nonatomic) NoogaArticleViewArticleSection *articleSection;
 @property (nonatomic) NoogaArticleModelCategory *category;
-
-@property (nonatomic) RKClient *wesClient;
-@property (nonatomic) RKObjectManager *unitManager;
-@property (nonatomic) Unit *testUnit;
 
 @end
