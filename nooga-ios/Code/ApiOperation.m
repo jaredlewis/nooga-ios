@@ -16,11 +16,15 @@
 
 @synthesize client;
 @synthesize apiPath;
-
 @synthesize params;
 @synthesize sorters;
-
 @synthesize operations;
+
+@synthesize objectManager;
+@synthesize objectMapping;
+@synthesize objectingMappingKeyPath;
+@synthesize objectClass;
+
 
 - (id)initWithClient:(RKClient *)theClient
 {
@@ -29,6 +33,7 @@
     if (self) {
         self.client = theClient;
         [self initDefaults];
+        [self initObjectManager];
     }
     
     return self;
@@ -39,6 +44,17 @@
     self.params = [[NSMutableDictionary alloc] init];
     self.sorters = [[NSMutableArray alloc] init];
     self.operations = [[NSMutableDictionary alloc] init];
+}
+
+- (void)initObjectManager
+{
+    //Create a mapping provider
+    self.objectManager = [[RKObjectManager alloc] initWithBaseURL:self.client.baseURL];
+    [self.objectManager setClient:self.client];
+    
+    //Article Mapping
+    [self.objectManager.mappingProvider setObjectMapping:self.objectMapping forKeyPath:self.objectingMappingKeyPath];
+    [self.objectManager.mappingProvider setSerializationMapping:[self.objectMapping inverseMapping] forClass:self.objectClass];
 }
 
 - (id)init
@@ -137,8 +153,12 @@
 
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
 {
-    NSLog(@"request = %@ response = %@", request, response);
-    NSLog(@"Success");
+    // Make sure this is a normal request and not an object loader request
+    if ([request class] != [RKRequest class]) {
+        return;
+    }
+    
+    // Get the callbacks for this request object
     NSDictionary *operationCallbacks = [self getOperationCallbacks:request];
     if ([operationCallbacks objectForKey:@"onSuccess"]) {
         ((void (^)(RKRequest *request, RKResponse *response))[operationCallbacks objectForKey:@"onSuccess"])(request, response);
@@ -197,6 +217,33 @@
 - (void)requestWillPrepareForSend:(RKRequest *)request
 {
     
+}
+
+#pragma mark - RKObjectLoaderDelegate
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
+{
+    NSLog(@"object loader loaded %@", objects);
+    NSDictionary *operationCallbacks = [self getOperationCallbacks:objectLoader];
+    if ([operationCallbacks objectForKey:@"onSuccess"]) {
+        ((void (^)(RKObjectLoader *objectLoader, NSArray *objects))[operationCallbacks objectForKey:@"onSuccess"])(objectLoader, objects);
+    }
+    if ([operationCallbacks objectForKey:@"onComplete"]) {
+        ((void (^)(RKObjectLoader *objectLoader, NSArray *objects))[operationCallbacks objectForKey:@"onComplete"])(objectLoader, objects);
+    }
+    
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+    NSLog(@"object loader failed %@", error);
+    //    if (self.failureBlock) {
+    //        self.failureBlock(objectLoader, error);
+    //    }
+    //
+    //    if (self.completeBlock) {
+    //        self.completeBlock();
+    //    }
 }
 
 @end

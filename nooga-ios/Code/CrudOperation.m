@@ -11,18 +11,13 @@
 
 @implementation CrudOperation
 
-@synthesize objectManager;
-@synthesize objectMapping;
-@synthesize objectingMappingKeyPath;
-@synthesize objectClass;
-
 - (id)initWithClient:(RKClient *)theClient
 {
     self = [super initWithClient:theClient];
     
     if (self) {
         [self initDefaults];
-        [self initObjectManager];
+        
     }
     
     return self;
@@ -39,13 +34,30 @@
 
 - (void)doLoad
 {
+    if (self.objectingMappingKeyPath == nil || self.objectMapping == nil) {
+        return;
+    }
+    
+    //Load the homepage
+    NSString *urlPath = [NSString stringWithFormat:@"/%@/public?%@", self.apiPath, [self paramString]];
+    
+    [self.objectManager loadObjectsAtResourcePath:urlPath delegate:self];
+}
+
+- (void)doLoadOperationWithParams:(NSDictionary *)theParams onSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock
+{
+    NSString *resourcePath = [NSString stringWithFormat:@"/%@/%@", self.apiPath, self.readAction];
+    NSString *resourcePathWithQueryParams = [resourcePath stringByAppendingQueryParameters:theParams];
+    [self.objectManager loadObjectsAtResourcePath:resourcePathWithQueryParams usingBlock:^(RKObjectLoader *loader) {
+        NSLog(@"%@", loader);
+        
+        [self addOperation:loader onSuccess:theSuccessBlock onFailure:theFailureBlock onComplete:theCompleteBlock];
+        loader.params = theParams;
+        loader.delegate = self;
+    }];
     
 }
 
-- (void)doLoadOperationOnSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock
-{
-    
-}
 
 - (void)doCreateWithItem:(id)item;
 {
@@ -64,13 +76,7 @@
 
 - (void)initObjectManager
 {
-    //Create a mapping provider
-    self.objectManager = [[RKObjectManager alloc] initWithBaseURL:self.client.baseURL];
-    [self.objectManager setClient:self.client];
-    
-    //Article Mapping
-    [self.objectManager.mappingProvider setObjectMapping:self.objectMapping forKeyPath:self.objectingMappingKeyPath];
-    [self.objectManager.mappingProvider setSerializationMapping:[self.objectMapping inverseMapping] forClass:self.objectClass];
+    [super initObjectManager];
     
     [self.objectManager.router routeClass:self.objectClass toResourcePath:[NSString stringWithFormat:@"/%@/public", self.apiPath]];
     [self.objectManager.router routeClass:self.objectClass toResourcePath:[NSString stringWithFormat:@"/%@/create", self.apiPath] forMethod:RKRequestMethodPOST];
@@ -80,19 +86,10 @@
 
 - (void)doRead
 {
-    if (self.objectingMappingKeyPath == nil || self.objectMapping == nil) {
-        return;
-    }
     
-    [self initObjectManager];
-    
-    //Load the homepage
-    NSString *urlPath = [NSString stringWithFormat:@"/%@/public?%@", self.apiPath, [self paramString]];
-    
-    [self.objectManager loadObjectsAtResourcePath:urlPath delegate:self];
 }
 
-- (void)doReadOperationOnSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock
+- (void)doReadOperationOnSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock
 {
     __block CrudOperation *blocksafeSelf = self;
     [self doOperation:^{
@@ -132,28 +129,5 @@
     } onSuccess:theSuccessBlock onFailure:theFailureBlock onComplete:theCompleteBlock];
 }
 
-#pragma mark - RKObjectLoaderDelegate
-
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
-{
-//    if (self.successBlock) {
-//        self.successBlock(objectLoader, objects);
-//    }
-//    
-//    if (self.completeBlock) {
-//        self.completeBlock();
-//    }
-}
-
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
-{
-//    if (self.failureBlock) {
-//        self.failureBlock(objectLoader, error);
-//    }
-//    
-//    if (self.completeBlock) {
-//        self.completeBlock();
-//    }
-}
 
 @end

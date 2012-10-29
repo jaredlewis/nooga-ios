@@ -17,6 +17,7 @@
     
     if (self) {
         [self initDefaults];
+        
     }
     
     return self;
@@ -27,6 +28,8 @@
     [super initDefaults];
     
     self.apiPath = @"article/article-api";
+    self.readAction = @"public";
+    
     self.objectingMappingKeyPath = @"records";
     self.objectMapping = [NoogaArticleModelArticle objectMapper];
     self.objectClass = [NoogaArticleModelArticle class];

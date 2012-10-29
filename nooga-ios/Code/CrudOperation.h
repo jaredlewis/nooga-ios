@@ -10,18 +10,13 @@
 
 @interface CrudOperation : ApiOperation <RKObjectLoaderDelegate>
 
-@property (nonatomic) RKObjectManager *objectManager;
-@property (nonatomic) RKObjectMapping *objectMapping;
-@property (nonatomic) NSString *objectingMappingKeyPath;
-@property (nonatomic) Class objectClass;
-
 @property (nonatomic) NSString *createAction;
 @property (nonatomic) NSString *readAction;
 @property (nonatomic) NSString *updateAction;
 @property (nonatomic) NSString *deleteAction;
 
 - (void)doLoad;
-- (void)doLoadOperationOnSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock;
+- (void)doLoadOperationWithParams:(NSDictionary *)theParams onSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock;
 
 //- (void)doCreateWithItem:(id)item;
 //- (void)doCreateOperationForItem:(id)item onSuccess:(void(^)(RKObjectLoader * objectLoader, NSArray *objects))theSuccessBlock onFailure:(void(^)(RKObjectLoader *objectLoader, NSError *error))theFailureBlock onComplete:(void(^)(void))theCompleteBlock;

@@ -17,10 +17,18 @@
 @property (nonatomic) NSMutableArray *sorters;
 @property (nonatomic) NSMutableDictionary *operations;
 
+@property (nonatomic) RKObjectManager *objectManager;
+@property (nonatomic) RKObjectMapping *objectMapping;
+@property (nonatomic) NSString *objectingMappingKeyPath;
+@property (nonatomic) Class objectClass;
+
 - (id)initWithClient:(RKClient *)theClient;
-- (void)initDefaults
+- (void)initDefaults;
+- (void)initObjectManager;
 
 - (void)doOperation:(id)theOperationBlock onSuccess:(id) theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock;
+- (void)addOperation:(id)operation onSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock;
+- (void)removeOperation:(id)operation;
 
 - (void)doGETOperationToApi:(NSString *)resourcePath withParams:(NSDictionary *)theParams onSuccess:(id)theSuccessBlock onFailure:(id)theFailureBlock onComplete:(id)theCompleteBlock;
 
