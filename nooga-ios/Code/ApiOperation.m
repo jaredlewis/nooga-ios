@@ -13,7 +13,6 @@
 
 @implementation ApiOperation
 
-
 @synthesize client;
 @synthesize apiPath;
 @synthesize params;
@@ -100,36 +99,18 @@
     [self.operations removeObjectForKey:[operation description]];
 }
 
-
-
-
 - (NSString *)urlEncode:(NSString *)theString
 {
     return [theString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSDictionary *)getPostParams
-{
-    return self.params;
-}
-
-- (NSString *)paramString
+- (NSMutableDictionary *)params
 {
     // Add params
-    NSMutableArray *paramArray = [[NSMutableArray alloc] init];
-    for (NSString *key in self.params) {
-        NSString *encodedValue = [self urlEncode:[self.params objectForKey:key]];
-        [paramArray addObject:[NSString stringWithFormat:@"%@=%@", key, encodedValue]];
-    }
+    NSMutableDictionary *combinedParams = [params copy];
+    [combinedParams setValue:self.sorters forKey:@"sort"];
     
-    // Add sorters
-    RKJSONParserJSONKit *parser = [[RKJSONParserJSONKit alloc] init];
-    [paramArray addObject:[NSString stringWithFormat:@"%@=%@", @"sort", [parser stringFromObject:self.sorters error:nil]]];
-    
-    // Create url formatted string joined with &
-    NSString *paramString = [paramArray componentsJoinedByString:@"&"];
-    
-    return paramString;
+    return combinedParams;
 }
 
 - (void)setParam:(NSString *)key value:(NSString *)value;
@@ -223,7 +204,6 @@
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
 {
-    NSLog(@"object loader loaded %@", objects);
     NSDictionary *operationCallbacks = [self getOperationCallbacks:objectLoader];
     if ([operationCallbacks objectForKey:@"onSuccess"]) {
         ((void (^)(RKObjectLoader *objectLoader, NSArray *objects))[operationCallbacks objectForKey:@"onSuccess"])(objectLoader, objects);
@@ -236,14 +216,7 @@
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
-    NSLog(@"object loader failed %@", error);
-    //    if (self.failureBlock) {
-    //        self.failureBlock(objectLoader, error);
-    //    }
-    //
-    //    if (self.completeBlock) {
-    //        self.completeBlock();
-    //    }
+    
 }
 
 @end
