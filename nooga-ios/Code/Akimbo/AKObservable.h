@@ -12,6 +12,7 @@
 
 @property NSMutableArray *notifications;
 @property (atomic) NSMutableArray *delegates;
+@property (atomic) NSMutableDictionary *listeners;
 
 /**
  * Designated initializer
@@ -36,5 +37,10 @@
 - (void)postFailureNotification:(NSString *)notificationName withData:(NSDictionary *)userInfo;
 - (void)postCompleteNotification:(NSString *)notificationName withData:(NSDictionary *)userInfo;
 - (void)postCustomNotification:(NSString *)notificationName notificationType:(NSString *)notificationType withData:(NSDictionary *)userInfo;
+
+- (void)on:(NSString *)eventName performBlock:(id)theBlock;
+- (void)on:(NSString *)eventName performBlock:(id)theBlock withBuffer:(float)bufferTime;
+//- (void)fireEvent:(NSString *)eventName, ...;
+- (void)fireEvent:(NSString *)eventName withDict:(NSDictionary *)dict;
 
 @end

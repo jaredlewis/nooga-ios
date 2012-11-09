@@ -17,6 +17,7 @@ static NSArray *suffixes;
 
 @synthesize notifications;
 @synthesize delegates;
+@synthesize listeners;
 
 - (id)init
 {
@@ -25,6 +26,8 @@ static NSArray *suffixes;
     if (self) {
         suffixes = @[@"Success", @"Failure", @"Complete"];
         notifications = [[NSMutableArray alloc] init];
+        listeners = [[NSMutableDictionary alloc] init];
+        
         @synchronized(delegates){
             delegates = [[NSMutableArray alloc] init];
         }
@@ -208,6 +211,88 @@ static NSArray *suffixes;
     [[NSNotificationCenter defaultCenter] postNotificationName:fullNotificationName
                                                         object:nil
                                                       userInfo:userInfo];
+}
+
+- (void)on:(NSString *)eventName performBlock:(id)theBlock
+{
+    [self on:eventName performBlock:theBlock withBuffer:0];
+}
+
+- (void)on:(NSString *)eventName performBlock:(id)theBlock withBuffer:(float)bufferTime
+{
+    if ([listeners objectForKey:eventName] == nil) {
+        [listeners setObject:[[NSMutableArray alloc] init] forKey:eventName];
+    }
+    
+    NSMutableDictionary *callbackData = [[NSMutableDictionary alloc] init];
+    [callbackData setValue:theBlock forKey:@"callback"];
+    [callbackData setValue:[NSNumber numberWithFloat:bufferTime] forKey:@"buffer"];
+//    [callbackData setValue:[NSTimer timerWithTimeInterval:0 target:nil selector:nil userInfo:nil repeats:NO] forKey:@"timer"];
+    
+    [[listeners objectForKey:eventName] addObject:callbackData];
+}
+
+- (void)fireBlock:(NSTimer *)timer {
+    NSLog(@"%@", [timer userInfo]);
+    ((void (^)(void))[timer userInfo])();
+}
+
+- (void)fireEvent:(NSString *)eventName, ...
+{
+    va_list args;
+    NSMutableArray *arguments = [[NSMutableArray alloc] init];
+    if (eventName) {
+        va_start(args, eventName);
+        id arg = va_arg(args, id);
+        while (arg != nil) {
+            [arguments addObject:arg];
+            arg = va_arg(args, id);
+        }
+        va_end(args);
+    }
+    
+    NSArray *blocks = [listeners objectForKey:eventName];
+    if (blocks != nil) {
+        for (NSMutableDictionary *blockData in blocks) {
+            id callback = [blockData objectForKey:@"callback"];
+            float buffer = [[blockData objectForKey:@"buffer"] floatValue];
+            if (buffer > 0) {
+                [[blockData objectForKey:@"timer"] invalidate];
+                [blockData setValue:[NSTimer scheduledTimerWithTimeInterval:buffer
+                                                                     target:self
+                                                                   selector:@selector(fireBlock:)
+                                                                   userInfo:^{
+                                                                        ((void(^)(id sender, NSArray *args))callback)(self, arguments);
+                                                                    }
+                                                                    repeats:NO] forKey:@"timer"];
+            } else {
+                ((void(^)(id sender, NSArray *args))callback)(self, arguments);
+            }
+        }
+    }
+}
+
+- (void)fireEvent:(NSString *)eventName withDict:(NSDictionary *)dict
+{
+    NSArray *blocks = [listeners objectForKey:eventName];
+    if (blocks != nil) {
+        for (NSMutableDictionary *blockData in blocks) {
+            id callback = [blockData objectForKey:@"callback"];
+            float buffer = [[blockData objectForKey:@"buffer"] floatValue];
+            if (buffer > 0) {
+                [[blockData objectForKey:@"timer"] invalidate];
+                [blockData setValue:[NSTimer scheduledTimerWithTimeInterval:buffer
+                                                                     target:self
+                                                                   selector:@selector(fireBlock:)
+                                                                   userInfo:^{
+                                                                       ((void(^)(id sender, NSDictionary *dict))callback)(self, dict);
+                                                                   }
+                                                                    repeats:NO] forKey:@"timer"];
+            } else {
+                ((void(^)(id sender, NSDictionary *dict))callback)(self, dict);
+            }
+        }
+    }
 }
 
 - (void)dealloc
