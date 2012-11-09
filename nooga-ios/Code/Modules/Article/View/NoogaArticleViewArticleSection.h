@@ -6,10 +6,9 @@
 //  Copyright (c) 2012 Jared Lewis. All rights reserved.
 //
 
-#import "TableViewControllerSection.h"
 #import "NoogaArticleViewArticleCell.h"
 
-@interface NoogaArticleViewArticleSection : TableViewControllerSection
+@interface NoogaArticleViewArticleSection : AkimboUITableViewControllerSection
 
 @property NoogaArticleViewArticleCell *sizeCell;
 

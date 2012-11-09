@@ -4,3 +4,6 @@
 [submodule "nooga-ios/Submodules/SDWebImage"]
         path = nooga-ios/Submodules/SDWebImage
         url = git://github.com/rs/SDWebImage.git
+[submodule "nooga-ios/Submodules/akimbo-ios"]
+	path = nooga-ios/Submodules/akimbo-ios
+	url = git@github.com:akimboio/akimbo-ios.git

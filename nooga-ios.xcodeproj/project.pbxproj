@@ -27,16 +27,6 @@
 		E4E3054E1633586400E661DE /* NoogaArticleModelArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E3054D1633586400E661DE /* NoogaArticleModelArticle.m */; };
 		E4E305521633695F00E661DE /* NoogaArticleModelCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305511633695F00E661DE /* NoogaArticleModelCategory.m */; };
 		E4E30556163370D000E661DE /* NoogaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30555163370D000E661DE /* NoogaModel.m */; };
-		E4E30577163387C500E661DE /* AKObservable.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30567163387C500E661DE /* AKObservable.m */; };
-		E4E30578163387C500E661DE /* AKWeakItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30569163387C500E661DE /* AKWeakItem.m */; };
-		E4E30579163387C500E661DE /* NSMutableArray+AK.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E3056B163387C500E661DE /* NSMutableArray+AK.m */; };
-		E4E3057A163387C500E661DE /* NSString+AK.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E3056D163387C500E661DE /* NSString+AK.m */; };
-		E4E3057B163387C500E661DE /* FireplugTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30570163387C500E661DE /* FireplugTableViewCell.m */; };
-		E4E3057C163387C500E661DE /* FPDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30572163387C500E661DE /* FPDataStore.m */; };
-		E4E3057D163387C500E661DE /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30574163387C500E661DE /* TableViewController.m */; };
-		E4E3057E163387C500E661DE /* TableViewControllerSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E30576163387C500E661DE /* TableViewControllerSection.m */; };
-		E4E305811633889A00E661DE /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305801633889A00E661DE /* Utils.m */; };
-		E4E305841633896100E661DE /* NSMutableArray+WeakReferences.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305831633896100E661DE /* NSMutableArray+WeakReferences.m */; };
 		E4E3058716338B2300E661DE /* NoogaArticleControllerArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E3058616338B2300E661DE /* NoogaArticleControllerArticle.m */; };
 		E4E3058A16338FF600E661DE /* NoogaArticleViewArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E3058916338FF600E661DE /* NoogaArticleViewArticleCell.m */; };
 		E4E305911633952F00E661DE /* NoogaHomeControllerHomeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305901633952F00E661DE /* NoogaHomeControllerHomeTable.m */; };
@@ -44,12 +34,11 @@
 		E4E305A916339EFB00E661DE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E305A716339EED00E661DE /* ImageIO.framework */; };
 		E4E305AF16339F4E00E661DE /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E305A216339E8500E661DE /* libSDWebImage.a */; };
 		E4E305B21633B54C00E661DE /* NoogaArticleViewArticleSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305B11633B54C00E661DE /* NoogaArticleViewArticleSectionHeader.m */; };
-		E4E305B71633B5A800E661DE /* FireplugDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305B41633B5A800E661DE /* FireplugDraw.m */; };
-		E4E305B81633B5A800E661DE /* UIColor+CreateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305B61633B5A800E661DE /* UIColor+CreateMethods.m */; };
 		E4E305BE1633B88300E661DE /* stag-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4E305BB1633B88300E661DE /* stag-bold-webfont.ttf */; };
 		E4E305BF1633B88300E661DE /* stag-medium-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4E305BC1633B88300E661DE /* stag-medium-webfont.ttf */; };
 		E4E305C01633B88300E661DE /* stag-semibold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4E305BD1633B88300E661DE /* stag-semibold-webfont.ttf */; };
 		E4E305C31633C19200E661DE /* NoogaArticleViewArticleWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E305C21633C19200E661DE /* NoogaArticleViewArticleWebView.m */; };
+		E4EAC6EF164D938D0025EDEB /* libakimbo-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EAC6E6164D934B0025EDEB /* libakimbo-ios.a */; };
 		F5B03CD71635F87700D0BD45 /* NoogaArticleControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B03CD61635F87700D0BD45 /* NoogaArticleControllerCategory.m */; };
 		F5DB339E1636E6EA00E79686 /* ApiOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DB339D1636E6EA00E79686 /* ApiOperation.m */; };
 		F5DB33A11636E70900E79686 /* CrudOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DB33A01636E70900E79686 /* CrudOperation.m */; };
@@ -92,13 +81,6 @@
 			remoteGlobalIDString = 259C301615128079003066A2;
 			remoteInfo = RestKitResources;
 		};
-		E4E3050D16334C9800E661DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4E304F716334BCC00E661DE /* RestKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 25160D1514564E810060A5C5;
-			remoteInfo = RestKit;
-		};
 		E4E3059F16339E8500E661DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E4E3059516339E8500E661DE /* SDWebImage.xcodeproj */;
@@ -120,12 +102,40 @@
 			remoteGlobalIDString = 531041E0157EAFA400BBABC3;
 			remoteInfo = "SDWebImage ARC+MKAnnotation";
 		};
-		E4E305AD16339F4800E661DE /* PBXContainerItemProxy */ = {
+		E4EAC6E5164D934B0025EDEB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E4E3059516339E8500E661DE /* SDWebImage.xcodeproj */;
+			containerPortal = E4EAC6DA164D934A0025EDEB /* akimbo-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4EABF36164C17BB0025EDEB;
+			remoteInfo = "akimbo-ios";
+		};
+		E4EAC6E7164D934B0025EDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4EAC6DA164D934A0025EDEB /* akimbo-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4EABF47164C17BB0025EDEB;
+			remoteInfo = "akimbo-iosTests";
+		};
+		E4EAC6E9164D934B0025EDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4EAC6DA164D934A0025EDEB /* akimbo-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4EABF65164C18010025EDEB;
+			remoteInfo = examples;
+		};
+		E4EAC6EB164D934B0025EDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4EAC6DA164D934A0025EDEB /* akimbo-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4EABF82164C18020025EDEB;
+			remoteInfo = examplesTests;
+		};
+		E4EAC6ED164D93800025EDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4EAC6DA164D934A0025EDEB /* akimbo-ios.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 53761307155AD0D5005750A4;
-			remoteInfo = "SDWebImage ARC";
+			remoteGlobalIDString = E4EABF35164C17BB0025EDEB;
+			remoteInfo = "akimbo-ios";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -157,26 +167,6 @@
 		E4E305511633695F00E661DE /* NoogaArticleModelCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleModelCategory.m; path = Code/Modules/Article/Model/NoogaArticleModelCategory.m; sourceTree = "<group>"; };
 		E4E30554163370D000E661DE /* NoogaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaModel.h; path = Code/Nooga/NoogaModel.h; sourceTree = "<group>"; };
 		E4E30555163370D000E661DE /* NoogaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaModel.m; path = Code/Nooga/NoogaModel.m; sourceTree = "<group>"; };
-		E4E30566163387C500E661DE /* AKObservable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKObservable.h; sourceTree = "<group>"; };
-		E4E30567163387C500E661DE /* AKObservable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKObservable.m; sourceTree = "<group>"; };
-		E4E30568163387C500E661DE /* AKWeakItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKWeakItem.h; sourceTree = "<group>"; };
-		E4E30569163387C500E661DE /* AKWeakItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKWeakItem.m; sourceTree = "<group>"; };
-		E4E3056A163387C500E661DE /* NSMutableArray+AK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+AK.h"; sourceTree = "<group>"; };
-		E4E3056B163387C500E661DE /* NSMutableArray+AK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+AK.m"; sourceTree = "<group>"; };
-		E4E3056C163387C500E661DE /* NSString+AK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AK.h"; sourceTree = "<group>"; };
-		E4E3056D163387C500E661DE /* NSString+AK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AK.m"; sourceTree = "<group>"; };
-		E4E3056F163387C500E661DE /* FireplugTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireplugTableViewCell.h; sourceTree = "<group>"; };
-		E4E30570163387C500E661DE /* FireplugTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireplugTableViewCell.m; sourceTree = "<group>"; };
-		E4E30571163387C500E661DE /* FPDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPDataStore.h; sourceTree = "<group>"; };
-		E4E30572163387C500E661DE /* FPDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPDataStore.m; sourceTree = "<group>"; };
-		E4E30573163387C500E661DE /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		E4E30574163387C500E661DE /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		E4E30575163387C500E661DE /* TableViewControllerSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerSection.h; sourceTree = "<group>"; };
-		E4E30576163387C500E661DE /* TableViewControllerSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerSection.m; sourceTree = "<group>"; };
-		E4E3057F1633889900E661DE /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		E4E305801633889A00E661DE /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		E4E305821633896100E661DE /* NSMutableArray+WeakReferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+WeakReferences.h"; sourceTree = "<group>"; };
-		E4E305831633896100E661DE /* NSMutableArray+WeakReferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+WeakReferences.m"; sourceTree = "<group>"; };
 		E4E3058516338B2300E661DE /* NoogaArticleControllerArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleControllerArticle.h; path = Code/Modules/Article/Controller/NoogaArticleControllerArticle.h; sourceTree = "<group>"; };
 		E4E3058616338B2300E661DE /* NoogaArticleControllerArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleControllerArticle.m; path = Code/Modules/Article/Controller/NoogaArticleControllerArticle.m; sourceTree = "<group>"; };
 		E4E3058816338FF600E661DE /* NoogaArticleViewArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleViewArticleCell.h; path = Code/Modules/Article/View/NoogaArticleViewArticleCell.h; sourceTree = "<group>"; };
@@ -189,15 +179,12 @@
 		E4E305A716339EED00E661DE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E4E305B01633B54B00E661DE /* NoogaArticleViewArticleSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleViewArticleSectionHeader.h; path = Code/Modules/Article/View/NoogaArticleViewArticleSectionHeader.h; sourceTree = "<group>"; };
 		E4E305B11633B54C00E661DE /* NoogaArticleViewArticleSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleViewArticleSectionHeader.m; path = Code/Modules/Article/View/NoogaArticleViewArticleSectionHeader.m; sourceTree = "<group>"; };
-		E4E305B31633B5A800E661DE /* FireplugDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireplugDraw.h; sourceTree = "<group>"; };
-		E4E305B41633B5A800E661DE /* FireplugDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireplugDraw.m; sourceTree = "<group>"; };
-		E4E305B51633B5A800E661DE /* UIColor+CreateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CreateMethods.h"; sourceTree = "<group>"; };
-		E4E305B61633B5A800E661DE /* UIColor+CreateMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CreateMethods.m"; sourceTree = "<group>"; };
 		E4E305BB1633B88300E661DE /* stag-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "stag-bold-webfont.ttf"; sourceTree = "<group>"; };
 		E4E305BC1633B88300E661DE /* stag-medium-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "stag-medium-webfont.ttf"; sourceTree = "<group>"; };
 		E4E305BD1633B88300E661DE /* stag-semibold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "stag-semibold-webfont.ttf"; sourceTree = "<group>"; };
 		E4E305C11633C19100E661DE /* NoogaArticleViewArticleWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleViewArticleWebView.h; path = Code/Modules/Article/View/NoogaArticleViewArticleWebView.h; sourceTree = "<group>"; };
 		E4E305C21633C19200E661DE /* NoogaArticleViewArticleWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleViewArticleWebView.m; path = Code/Modules/Article/View/NoogaArticleViewArticleWebView.m; sourceTree = "<group>"; };
+		E4EAC6DA164D934A0025EDEB /* akimbo-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "akimbo-ios.xcodeproj"; path = "nooga-ios/Submodules/akimbo-ios/akimbo-ios.xcodeproj"; sourceTree = "<group>"; };
 		F5B03CD61635F87700D0BD45 /* NoogaArticleControllerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoogaArticleControllerCategory.m; path = Code/Modules/Article/Controller/NoogaArticleControllerCategory.m; sourceTree = "<group>"; };
 		F5B03CD81635FA2A00D0BD45 /* NoogaArticleControllerCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoogaArticleControllerCategory.h; path = Code/Modules/Article/Controller/NoogaArticleControllerCategory.h; sourceTree = "<group>"; };
 		F5DB339C1636E6EA00E79686 /* ApiOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApiOperation.h; path = Code/ApiOperation.h; sourceTree = "<group>"; };
@@ -213,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4EAC6EF164D938D0025EDEB /* libakimbo-ios.a in Frameworks */,
 				E4E305AF16339F4E00E661DE /* libSDWebImage.a in Frameworks */,
 				E4E305A916339EFB00E661DE /* ImageIO.framework in Frameworks */,
 				E4E3052316334D5D00E661DE /* libRestKit.a in Frameworks */,
@@ -235,6 +223,7 @@
 		E4E304C71633491100E661DE = {
 			isa = PBXGroup;
 			children = (
+				E4EAC6DA164D934A0025EDEB /* akimbo-ios.xcodeproj */,
 				E4E3059516339E8500E661DE /* SDWebImage.xcodeproj */,
 				E4E304F716334BCC00E661DE /* RestKit.xcodeproj */,
 				E4E304DC1633491100E661DE /* nooga-ios */,
@@ -310,8 +299,6 @@
 		E4E305481633575C00E661DE /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				E4E30565163387C500E661DE /* Akimbo */,
-				E4E3056E163387C500E661DE /* Fireplug */,
 				E4E30553163370A400E661DE /* Nooga */,
 				E4E305491633576800E661DE /* Modules */,
 				F5DB339C1636E6EA00E79686 /* ApiOperation.h */,
@@ -370,46 +357,6 @@
 			);
 			name = Views;
 			path = Code/Nooga/Views;
-			sourceTree = "<group>";
-		};
-		E4E30565163387C500E661DE /* Akimbo */ = {
-			isa = PBXGroup;
-			children = (
-				E4E305821633896100E661DE /* NSMutableArray+WeakReferences.h */,
-				E4E305831633896100E661DE /* NSMutableArray+WeakReferences.m */,
-				E4E30566163387C500E661DE /* AKObservable.h */,
-				E4E30567163387C500E661DE /* AKObservable.m */,
-				E4E30568163387C500E661DE /* AKWeakItem.h */,
-				E4E30569163387C500E661DE /* AKWeakItem.m */,
-				E4E3056A163387C500E661DE /* NSMutableArray+AK.h */,
-				E4E3056B163387C500E661DE /* NSMutableArray+AK.m */,
-				E4E3056C163387C500E661DE /* NSString+AK.h */,
-				E4E3056D163387C500E661DE /* NSString+AK.m */,
-			);
-			name = Akimbo;
-			path = Code/Akimbo;
-			sourceTree = "<group>";
-		};
-		E4E3056E163387C500E661DE /* Fireplug */ = {
-			isa = PBXGroup;
-			children = (
-				E4E305B31633B5A800E661DE /* FireplugDraw.h */,
-				E4E305B41633B5A800E661DE /* FireplugDraw.m */,
-				E4E305B51633B5A800E661DE /* UIColor+CreateMethods.h */,
-				E4E305B61633B5A800E661DE /* UIColor+CreateMethods.m */,
-				E4E3057F1633889900E661DE /* Utils.h */,
-				E4E305801633889A00E661DE /* Utils.m */,
-				E4E3056F163387C500E661DE /* FireplugTableViewCell.h */,
-				E4E30570163387C500E661DE /* FireplugTableViewCell.m */,
-				E4E30571163387C500E661DE /* FPDataStore.h */,
-				E4E30572163387C500E661DE /* FPDataStore.m */,
-				E4E30573163387C500E661DE /* TableViewController.h */,
-				E4E30574163387C500E661DE /* TableViewController.m */,
-				E4E30575163387C500E661DE /* TableViewControllerSection.h */,
-				E4E30576163387C500E661DE /* TableViewControllerSection.m */,
-			);
-			name = Fireplug;
-			path = Code/Fireplug;
 			sourceTree = "<group>";
 		};
 		E4E3058B16338FFB00E661DE /* View */ = {
@@ -483,6 +430,17 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		E4EAC6DB164D934A0025EDEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4EAC6E6164D934B0025EDEB /* libakimbo-ios.a */,
+				E4EAC6E8164D934B0025EDEB /* akimbo-iosTests.octest */,
+				E4EAC6EA164D934B0025EDEB /* examples.app */,
+				E4EAC6EC164D934B0025EDEB /* examplesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -497,8 +455,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				E4E305AE16339F4800E661DE /* PBXTargetDependency */,
-				E4E3050E16334C9800E661DE /* PBXTargetDependency */,
+				E4EAC6EE164D93800025EDEB /* PBXTargetDependency */,
 			);
 			name = "nooga-ios";
 			productName = "nooga-ios";
@@ -525,6 +482,10 @@
 			productRefGroup = E4E304D31633491100E661DE /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = E4EAC6DB164D934A0025EDEB /* Products */;
+					ProjectRef = E4EAC6DA164D934A0025EDEB /* akimbo-ios.xcodeproj */;
+				},
 				{
 					ProductGroup = E4E304F816334BCC00E661DE /* Products */;
 					ProjectRef = E4E304F716334BCC00E661DE /* RestKit.xcodeproj */;
@@ -598,6 +559,34 @@
 			remoteRef = E4E305A316339E8500E661DE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		E4EAC6E6164D934B0025EDEB /* libakimbo-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libakimbo-ios.a";
+			remoteRef = E4EAC6E5164D934B0025EDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4EAC6E8164D934B0025EDEB /* akimbo-iosTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "akimbo-iosTests.octest";
+			remoteRef = E4EAC6E7164D934B0025EDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4EAC6EA164D934B0025EDEB /* examples.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = examples.app;
+			remoteRef = E4EAC6E9164D934B0025EDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4EAC6EC164D934B0025EDEB /* examplesTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = examplesTests.octest;
+			remoteRef = E4EAC6EB164D934B0025EDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -627,23 +616,11 @@
 				E4E3054E1633586400E661DE /* NoogaArticleModelArticle.m in Sources */,
 				E4E305521633695F00E661DE /* NoogaArticleModelCategory.m in Sources */,
 				E4E30556163370D000E661DE /* NoogaModel.m in Sources */,
-				E4E30577163387C500E661DE /* AKObservable.m in Sources */,
-				E4E30578163387C500E661DE /* AKWeakItem.m in Sources */,
-				E4E30579163387C500E661DE /* NSMutableArray+AK.m in Sources */,
-				E4E3057A163387C500E661DE /* NSString+AK.m in Sources */,
-				E4E3057B163387C500E661DE /* FireplugTableViewCell.m in Sources */,
-				E4E3057C163387C500E661DE /* FPDataStore.m in Sources */,
-				E4E3057D163387C500E661DE /* TableViewController.m in Sources */,
-				E4E3057E163387C500E661DE /* TableViewControllerSection.m in Sources */,
-				E4E305811633889A00E661DE /* Utils.m in Sources */,
-				E4E305841633896100E661DE /* NSMutableArray+WeakReferences.m in Sources */,
 				E4E3058716338B2300E661DE /* NoogaArticleControllerArticle.m in Sources */,
 				E4E3058A16338FF600E661DE /* NoogaArticleViewArticleCell.m in Sources */,
 				E4E305911633952F00E661DE /* NoogaHomeControllerHomeTable.m in Sources */,
 				E4E30594163395A400E661DE /* NoogaArticleViewArticleSection.m in Sources */,
 				E4E305B21633B54C00E661DE /* NoogaArticleViewArticleSectionHeader.m in Sources */,
-				E4E305B71633B5A800E661DE /* FireplugDraw.m in Sources */,
-				E4E305B81633B5A800E661DE /* UIColor+CreateMethods.m in Sources */,
 				E4E305C31633C19200E661DE /* NoogaArticleViewArticleWebView.m in Sources */,
 				F5B03CD71635F87700D0BD45 /* NoogaArticleControllerCategory.m in Sources */,
 				F5DB339E1636E6EA00E79686 /* ApiOperation.m in Sources */,
@@ -655,15 +632,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E4E3050E16334C9800E661DE /* PBXTargetDependency */ = {
+		E4EAC6EE164D93800025EDEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RestKit;
-			targetProxy = E4E3050D16334C9800E661DE /* PBXContainerItemProxy */;
-		};
-		E4E305AE16339F4800E661DE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SDWebImage ARC";
-			targetProxy = E4E305AD16339F4800E661DE /* PBXContainerItemProxy */;
+			name = "akimbo-ios";
+			targetProxy = E4EAC6ED164D93800025EDEB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -745,11 +717,19 @@
 		E4E304F11633491100E661DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/nooga-ios/Submodules/RestKit/Tests/Vendor/OCHamcrest\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nooga-ios/nooga-ios-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+					"\"$(SRCROOT)/nooga-ios/Submodules/akimbo-ios\"/**",
+				);
 				INFOPLIST_FILE = "nooga-ios/nooga-ios-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/nooga-ios/Submodules/akimbo-ios\"/**";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -762,11 +742,19 @@
 		E4E304F21633491100E661DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/nooga-ios/Submodules/RestKit/Tests/Vendor/OCHamcrest\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nooga-ios/nooga-ios-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+					"\"$(SRCROOT)/nooga-ios/Submodules/akimbo-ios\"/**",
+				);
 				INFOPLIST_FILE = "nooga-ios/nooga-ios-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/nooga-ios/Submodules/akimbo-ios\"/**";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

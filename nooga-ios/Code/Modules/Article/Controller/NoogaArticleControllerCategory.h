@@ -7,13 +7,12 @@
 //
 
 #import <RestKit/RestKit.h>
-#import "TableViewController.h"
 
 @class NoogaArticleViewArticleSection;
 @class ArticleApi;
 @class Unit;
 
-@interface NoogaArticleControllerCategory : TableViewController <TableViewControllerSectionDelegate>
+@interface NoogaArticleControllerCategory : AkimboUITableViewController <AkimboUITableViewControllerSectionDelegate>
 
 @property (nonatomic) ArticleApi *articleApi;
 @property (nonatomic) NoogaArticleViewArticleSection *articleSection;

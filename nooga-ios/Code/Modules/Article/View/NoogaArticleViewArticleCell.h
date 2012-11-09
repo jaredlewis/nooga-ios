@@ -6,10 +6,9 @@
 //  Copyright (c) 2012 Jared Lewis. All rights reserved.
 //
 
-#import "FireplugTableViewCell.h"
 #import "NoogaArticleModelArticle.h"
 
-@interface NoogaArticleViewArticleCell : FireplugTableViewCell
+@interface NoogaArticleViewArticleCell : AkimboUITableViewCell
 
 @property (nonatomic) UILabel *titleLabel;
 @property (nonatomic) CGRect titleLabelMargin;

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FireplugDraw.h"
 @class NoogaArticleModelCategory;
 
 @interface NoogaArticleViewArticleSectionHeader : UIView
@@ -15,7 +14,7 @@
 @property (nonatomic) UILabel *titleLabel;
 @property (nonatomic) UIColor *startColor;
 @property (nonatomic) UIColor *endColor;
-@property (nonatomic) FireplugDraw *fireplugDraw;
+@property (nonatomic) AkimboDraw *akimboDraw;
 @property (nonatomic) NoogaArticleModelCategory *category;
 
 @end

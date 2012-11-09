@@ -134,6 +134,7 @@
 
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
 {
+    NSLog(@"%@", [request.URL absoluteString]);
     // Make sure this is a normal request and not an object loader request
     if ([request class] != [RKRequest class]) {
         return;

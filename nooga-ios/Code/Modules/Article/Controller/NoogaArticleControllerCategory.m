@@ -34,16 +34,19 @@
 {
     [super viewDidLoad];
     
-    RKClient *client = [[RKClient alloc] initWithBaseURLString:@"http://127.0.0.1:8000"];
+    RKClient *client = [[RKClient alloc] initWithBaseURLString:@"http://nooga.com"];
     articleApi = [[ArticleApi alloc] initWithClient:client];
+    NSArray *sort = @[
+        @{
+            @"property": @"published_at",
+            @"direction": @"DESC",
+        }
+    ];
+    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:sort options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *sortString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     NSDictionary *params = @{
         @"category": self.category.categoryId,
-        @"sort": @[
-            @{
-                @"property": @"updated_at",
-                @"direction": @"DESC",
-            }
-        ]
+        @"sort": sortString
     };
     [articleApi doLoadOperationWithParams:params onSuccess:^(RKObjectLoader *loader, NSArray *objects){
         NSLog(@"object load success block from controller");
@@ -56,7 +59,7 @@
 ////////////////////////////////////////////////////////////
 //  Table section delegate methods
 ////////////////////////////////////////////////////////////
-- (void)tableSection:(TableViewControllerSection *)section cellClicked:(UITableViewCell *)cell withRecord:(NoogaArticleModelArticle *)record
+- (void)tableSection:(AkimboUITableViewControllerSection *)section cellClicked:(UITableViewCell *)cell withRecord:(NoogaArticleModelArticle *)record
 {
     UIViewController *contentViewController = [[UIViewController alloc] init];
     NoogaArticleViewArticleWebView *webView = [[NoogaArticleViewArticleWebView alloc] init];

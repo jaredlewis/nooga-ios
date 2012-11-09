@@ -12,6 +12,7 @@
 #import "NoogaArticleViewArticleSectionHeader.h"
 #import "NoogaArticleViewArticleWebView.h"
 #import "NoogaArticleControllerCategory.h"
+#import <RestKit/RKJSONParserJSONKit.h>
 
 @implementation NoogaHomeControllerHomeTable
 
@@ -156,7 +157,7 @@
 ////////////////////////////////////////////////////////////
 //  Table section delegate methods
 ////////////////////////////////////////////////////////////
-- (void)tableSection:(TableViewControllerSection *)section cellClicked:(UITableViewCell *)cell withRecord:(NoogaArticleModelArticle *)record
+- (void)tableSection:(AkimboUITableViewControllerSection *)section cellClicked:(UITableViewCell *)cell withRecord:(NoogaArticleModelArticle *)record
 {
     UIViewController *contentViewController = [[UIViewController alloc] init];
     NoogaArticleViewArticleWebView *webView = [[NoogaArticleViewArticleWebView alloc] init];

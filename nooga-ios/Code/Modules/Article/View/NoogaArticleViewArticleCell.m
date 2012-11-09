@@ -109,7 +109,7 @@
     [super drawRect:rect];
 }
 
-- (void)configureWithRecord:(NoogaArticleModelArticle *)record fromSection:(TableViewControllerSection *)section
+- (void)configureWithRecord:(NoogaArticleModelArticle *)record fromSection:(AkimboUITableViewControllerSection *)section
 {
     [self.titleLabel setText:record.title];
     [self.excerptLabel setText:record.excerpt];

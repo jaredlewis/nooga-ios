@@ -7,10 +7,9 @@
 //
 
 #import <RestKit/RestKit.h>
-#import "TableViewController.h"
 #import "NoogaArticleViewArticleSection.h"
 
-@interface NoogaHomeControllerHomeTable : TableViewController <RKRequestDelegate, RKObjectLoaderDelegate, TableViewControllerSectionDelegate>
+@interface NoogaHomeControllerHomeTable : AkimboUITableViewController <RKRequestDelegate, RKObjectLoaderDelegate, AkimboUITableViewControllerSectionDelegate>
 
 @property (nonatomic) NoogaArticleViewArticleSection *topSection;
 
